@@ -67,5 +67,5 @@ npm run dev
 👤 Arpit
 - 💼 [LinkedIn](https://www.linkedin.com/in/arpitbhuker)  
 - 💻 [GitHub](https://github.com/arpitbhuker)  
-- ✉️ [e-mail](mailto:arpitkumarbhuker@email.com)
+- ✉️ [E-mail](mailto:arpitkumarbhuker@email.com)
 
