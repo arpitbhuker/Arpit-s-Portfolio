@@ -1,73 +1,71 @@
-# Welcome to your Lovable project
+# 🌐 Arpit's Portfolio
 
-## Project info
+## 💡 About this Project
 
-**URL**: https://lovable.dev/projects/47543b61-684d-4625-b983-cfd8cdfd48d7
+A modern, dynamic, and responsive portfolio built using React, TypeScript, Vite, Tailwind CSS, and shadcn-ui, designed to showcase my professional identity as a **B.E. CSE (AI & ML) student**, crafted to highlight my technical expertise, innovation, and problem-solving approach.  
+It showcases selected projects, achievements, and skills in **Artificial Intelligence, Machine Learning, and Data science** through a modern and interactive design.
 
-## How can I edit this code?
+---
+## 🧩 Tech Stack
 
-There are several ways of editing your application.
+- ⚛️ React + TypeScript – For modular, scalable UI development
 
-**Use Lovable**
+- ⚡ Vite – For blazing-fast builds and hot reloading
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/47543b61-684d-4625-b983-cfd8cdfd48d7) and start prompting.
+- 🎨 Tailwind CSS – For clean, responsive styling
 
-Changes made via Lovable will be committed automatically to this repo.
+- 🧱 shadcn-ui – For elegant and accessible UI components
 
-**Use your preferred IDE**
+- 🪄 Framer Motion – For smooth animations and transitions
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 📁 Project Info
 
-Follow these steps:
+- **Repository URL:** [Arpit's Portfolio](https://github.com/arpitbhuker/Arpit-s-Portfolio/tree/main)
+- **Check out my portfolio here:** 🌐 [Visit Portfolio](https://arpit-bhuker.vercel.app)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## ⚙️ How to Edit
 
-# Step 3: Install the necessary dependencies.
-npm i
+### **Use your preferred IDE**
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+Clone the repo and make edits locally. Changes pushed will update your GitHub repository.
+
+```bash
+# Clone the repository
+git clone https://github.com/arpitbhuker/Arpit-s-Portfolio.git
+
+# Navigate to the project directory
+cd Arpit-s-Portfolio
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
 ```
+---
 
-**Edit a file directly in GitHub**
+## 🎯 Key Highlights
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- Fully responsive design (mobile-first)
 
-**Use GitHub Codespaces**
+- Clean, minimalist UI with professional aesthetics
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- Interactive animations powered by Framer Motion
 
-## What technologies are used for this project?
+- Optimized performance with Vite and lazy loading
 
-This project is built with:
+- Easy future expansion — add new sections, projects, or blogs seamlessly
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
+## 📬 Contact
 
-Simply open [Lovable](https://lovable.dev/projects/47543b61-684d-4625-b983-cfd8cdfd48d7) and click on Share -> Publish.
+👤 Arpit
+- 💼 [LinkedIn](https://www.linkedin.com/in/arpitbhuker)  
+- 💻 [GitHub](https://github.com/arpitbhuker)  
+- ✉️ [E-mail](mailto:arpitkumarbhuker@email.com)
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
