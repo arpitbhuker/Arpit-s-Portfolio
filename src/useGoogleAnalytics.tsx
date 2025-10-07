@@ -21,10 +21,15 @@ declare global {
           window.dataLayer.push(args); 
         } 
         window.gtag = gtag;
-  
-        gtag("js", new Date());
-        gtag("config", measurementId, { send_page_view: true });
       }
+  
+      setTimeout(() => {
+          if (window.gtag) {
+              window.gtag("js", new Date());
+              window.gtag("config", measurementId, { send_page_view: true });
+          }
+      }, 100);
+  
     }, [measurementId]);
   };
   
