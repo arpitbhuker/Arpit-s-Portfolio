@@ -3,7 +3,7 @@
 ## 💡 About this Project
 
 A modern, dynamic, and responsive portfolio built using React, TypeScript, Vite, Tailwind CSS, and shadcn-ui, designed to showcase my professional identity as a **B.E. CSE (AI & ML) student**, crafted to highlight my technical expertise, innovation, and problem-solving approach.  
-It showcases selected projects, achievements, and skills in **Artificial Intelligence, Machine Learning, and Software Development** through a modern and interactive design.
+It showcases selected projects, achievements, and skills in **Artificial Intelligence, Machine Learning, and Data science** through a modern and interactive design.
 
 ---
 ## 🧩 Tech Stack
