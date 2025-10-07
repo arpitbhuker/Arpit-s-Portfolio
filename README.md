@@ -23,6 +23,7 @@ It showcases selected projects, achievements, and skills in **Artificial Intelli
 ## 📁 Project Info
 
 **Repository URL:** [Arpit's Portfolio](https://github.com/arpitbhuker/Arpit-s-Portfolio/tree/main)
+**Check out my portfolio here:** 🌐 [Visit Portfolio](https://arpit-bhuker.vercel.app)
 
 ---
 
@@ -63,7 +64,7 @@ npm run dev
 
 ## 📬 Contact
 
-👤 Arpit Bhuker  
+👤 Arpit
 💼 [LinkedIn](https://www.linkedin.com/in/arpitbhuker)  
 💻 [GitHub](https://github.com/arpitbhuker)  
 ✉️ [arpitkumarbhuker@email.com](mailto:arpitkumarbhuker@email.com)
