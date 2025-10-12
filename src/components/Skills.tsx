@@ -103,40 +103,64 @@ const Skills = () => {
 
   const skillGroups = [
     {
-      title: "Programming",
+      title: "Programming & Tools",
       items: [
         { name: "Python", icon: Code },
         { name: "SQL", icon: Database },
         { name: "C++", icon: Code },
+        { name: "Jupyter Notebook", icon: Code },
+        { name: "VSCode", icon: Code },
+        { name: "Git/GitHub", icon: Code },
+        { name: "CI/CD", icon: Code },
+        { name: "Azure AI / Cloud", icon: Brain },
       ],
     },
     {
-      title: "Data Tools and Databases",
+      title: "Data Analysis & Visualization",
       items: [
+        { name: "EDA", icon: BarChart3 },
+        { name: "Data Cleaning", icon: BarChart3 },
+        { name: "Data Wrangling", icon: BarChart3 },
+        { name: "Stats Analysis", icon: BarChart3 },
+        { name: "Dashboard Storytelling", icon: BarChart3 },
         { name: "Power BI", icon: BarChart3 },
         { name: "Tableau", icon: BarChart3 },
-        { name: "MS Excel", icon: BarChart3 },
-        { name: "Jupyter Notebook", icon: Code },
-        { name: "Git/GitHub", icon: Code },
-        { name: "MySQL", icon: Database },
+        { name: "matplotlib", icon: BarChart3 },
+        { name: "seaborn", icon: BarChart3 },
       ],
     },
     {
-      title: "AI/ML",
+      title: "Machine Learning",
       items: [
-        { name: "Machine Learning", icon: Brain },
+        { name: "Supervised Learning", icon: Brain },
+        { name: "Unsupervised Learning", icon: Brain },
         { name: "Predictive Modeling", icon: Brain },
+        { name: "Feature Engineering", icon: Brain },
+        { name: "Model Deployment", icon: Brain },
+        { name: "TensorFlow", icon: Brain },
+        { name: "scikit-learn", icon: Brain },
+        { name: "NumPy", icon: Brain },
+        { name: "Pandas", icon: Brain },
+      ],
+    },
+    {
+      title: "AI / NLP",
+      items: [
         { name: "NLP", icon: Brain },
+        { name: "Text Summarization", icon: Brain },
+        { name: "Sentiment Analysis", icon: Brain },
+        { name: "LLMs / OpenAI APIs", icon: Brain },
         { name: "Computer Vision", icon: Brain },
       ],
     },
     {
-      title: "Data Science",
+      title: "Databases & ETL",
       items: [
-        { name: "Data Cleaning", icon: BarChart3 },
-        { name: "ETL Pipelines", icon: Database },
-        { name: "EDA", icon: BarChart3 },
+        { name: "MySQL", icon: Database },
         { name: "DBMS", icon: Database },
+        { name: "ETL Pipelines", icon: Database },
+        { name: "Data Quality", icon: Database },
+        { name: "Excel", icon: Database },
       ],
     },
     {
@@ -150,9 +174,11 @@ const Skills = () => {
         { name: "Collaboration", icon: Users },
         { name: "Presentation Skills", icon: Users },
         { name: "Research Skills", icon: BookOpen },
+        { name: "Documentation & Reporting", icon: Users },
       ],
     },
   ];
+  
 
   const Card3D = ({ item, index, delay = 0, type = "skill" }) => {
     const [isFlipped, setIsFlipped] = useState(false);
