@@ -213,39 +213,39 @@
 }
 
 #skills {
-  --glass-bg: 210 30% 25%; 
+  --glass-bg: 215 25% 22%; 
 }
 
 #skills .bg-gradient-glow {
   background: linear-gradient(
     135deg,
-    hsl(210 50% 90% / 0.1),
-    hsl(210 40% 80% / 0.1)
+    hsl(195 75% 62% / 0.05),
+    hsl(200 80% 63% / 0.05)
   );
 }
 
 
 #projects {
-  --glass-bg: 210 35% 28%; 
+  --glass-bg: 215 25% 23%;
 }
 
 #projects .bg-gradient-glow {
   background: linear-gradient(
     135deg,
-    hsl(210 60% 85% / 0.1),
-    hsl(210 50% 75% / 0.1)
+    hsl(196 75% 63% / 0.05),
+    hsl(202 80% 64% / 0.05)
   );
 }
 
 
 #contact {
-  --glass-bg: 210 40% 30%; 
+  --glass-bg: 215 25% 24%;
 }
 
 #contact .bg-gradient-glow {
   background: linear-gradient(
     135deg,
-    hsl(210 60% 80% / 0.1),
-    hsl(210 50% 70% / 0.1)
+    hsl(197 75% 64% / 0.05),
+    hsl(204 80% 65% / 0.05)
   );
 }
