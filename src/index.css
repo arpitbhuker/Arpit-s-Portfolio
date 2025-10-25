@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Dark Portfolio Theme Design System for Arpit's Portfolio
-All colors MUST be HSL for consistency and theme compatibility.
-*/
 
 @layer base {
   :root {
@@ -200,4 +197,17 @@ All colors MUST be HSL for consistency and theme compatibility.
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+
+#about {
+  --glass-bg: 215 25% 20%; 
+}
+
+#about .bg-gradient-glow {
+  background: linear-gradient(
+    135deg,
+    hsl(194 70% 60% / 0.05),
+    hsl(220 100% 65% / 0.05)
+  );
 }
