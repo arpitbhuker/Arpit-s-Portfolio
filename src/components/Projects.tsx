@@ -22,6 +22,18 @@ const Projects = () => {
       link: "https://github.com/arpitbhuker/PPT-Gesture-Control"
     },
     {
+      id: 2,
+      title: "Twitter Analytics Dashboard",
+      tech: ["Power BI"],
+      timeline: "Apr - May 2025",
+      icon: BarChart3,
+      gradient: "from-blue-400 to-cyan-600",
+      description: "Designed a Power BI dashboard to capture and visualize real-time Twitter data, including tweet volume, engagement, media views, URL clicks, and hashtag performance, for actionable social media insights.",
+      impact: "Interactive visualizations and a responsive mobile interface enabled seamless data exploration, providing actionable insights for social media strategy and maximizing user engagement across platforms.",
+      category: "Social Analytics",
+      link: "https://github.com/arpitbhuker/Twitter-Analytics-Dashboard"
+    }
+    {
       id: 3,
       title: "Netflix Data Analysis",
       tech: ["Python", "Pandas", "NumPy"],
@@ -46,18 +58,6 @@ const Projects = () => {
       link: "https://github.com/arpitbhuker/Electric-Vehicles-Data-Analysis"
     },
     {
-      id: 6,
-      title: "Amazon Sales Analytics Dashboard",
-      tech: ["Power BI", "DAX"],
-      timeline: "Jan - Feb 2024",
-      icon: Database,
-      gradient: "from-orange-500 to-yellow-600",
-      description: "Built a Power BI dashboard to analyze 3,000 Amazon sales records using DAX and Power Query. Enabled tracking of KPIs and trends across multiple product categories for more efficient decision-making.",
-      impact: "This optimization reduced manual analysis time by 40%, improving decision-making efficiency and real-time tracking of sales performance.",
-      category: "Business Intelligence",
-      link: "https://github.com/arpitbhuker/Amazon-Sales-Dashboard"
-    },
-    {
       id: 5,
       title: "AI-Driven Financial Fraud Detection System",
       tech: ["Machine Learning", "Python"],
@@ -70,17 +70,17 @@ const Projects = () => {
       link: "https://github.com/arpitbhuker/AI-Driven-Financial-Fraud-Detection-System"
     },
     {
-      id: 2,
-      title: "Twitter Analytics Dashboard",
-      tech: ["Power BI"],
-      timeline: "Apr - May 2025",
-      icon: BarChart3,
-      gradient: "from-blue-400 to-cyan-600",
-      description: "Designed a Power BI dashboard to capture and visualize real-time Twitter data, including tweet volume, engagement, media views, URL clicks, and hashtag performance, for actionable social media insights.",
-      impact: "Interactive visualizations and a responsive mobile interface enabled seamless data exploration, providing actionable insights for social media strategy and maximizing user engagement across platforms.",
-      category: "Social Analytics",
-      link: "https://github.com/arpitbhuker/Twitter-Analytics-Dashboard"
-    }
+      id: 6,
+      title: "Amazon Sales Analytics Dashboard",
+      tech: ["Power BI", "DAX"],
+      timeline: "Jan - Feb 2024",
+      icon: Database,
+      gradient: "from-orange-500 to-yellow-600",
+      description: "Built a Power BI dashboard to analyze 3,000 Amazon sales records using DAX and Power Query. Enabled tracking of KPIs and trends across multiple product categories for more efficient decision-making.",
+      impact: "This optimization reduced manual analysis time by 40%, improving decision-making efficiency and real-time tracking of sales performance.",
+      category: "Business Intelligence",
+      link: "https://github.com/arpitbhuker/Amazon-Sales-Dashboard"
+    },
   ];
 
   const ProjectCard = ({ project, index }: { project: any; index: number }) => {
