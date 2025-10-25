@@ -22,7 +22,7 @@ const Projects = () => {
       link: "https://github.com/arpitbhuker/PPT-Gesture-Control"
     },
     {
-      id: 2,
+      id: 3,
       title: "Netflix Data Analysis",
       tech: ["Python", "Pandas", "NumPy"],
       timeline: "Feb - Mar 2025",
@@ -34,7 +34,7 @@ const Projects = () => {
       link: "https://github.com/arpitbhuker/Netflix-Data-Analysis"
     },
     {
-      id: 3,
+      id: 4,
       title: "Electric Vehicles Data Analysis",
       tech: ["Tableau"],
       timeline: "Jun - Jul 2024",
@@ -46,7 +46,7 @@ const Projects = () => {
       link: "https://github.com/arpitbhuker/Electric-Vehicles-Data-Analysis"
     },
     {
-      id: 4,
+      id: 6,
       title: "Amazon Sales Analytics Dashboard",
       tech: ["Power BI", "DAX"],
       timeline: "Jan - Feb 2024",
@@ -61,7 +61,7 @@ const Projects = () => {
       id: 5,
       title: "AI-Driven Financial Fraud Detection System",
       tech: ["Machine Learning", "Python"],
-      timeline: "Jan - Apr 2024",
+      timeline: "Feb - Apr 2024",
       icon: Brain,
       gradient: "from-purple-500 to-pink-600",
       description: "Developed machine learning models using XGBoost and Random Forest on 1M transaction records to detect financial fraud with 98% accuracy. Preprocessed and ETL-handled data for optimal model performance.",
@@ -70,10 +70,10 @@ const Projects = () => {
       link: "https://github.com/arpitbhuker/AI-Driven-Financial-Fraud-Detection-System"
     },
     {
-      id: 6,
+      id: 2,
       title: "Twitter Analytics Dashboard",
       tech: ["Power BI"],
-      timeline: "Mar - Apr 2025",
+      timeline: "Apr - May 2025",
       icon: BarChart3,
       gradient: "from-blue-400 to-cyan-600",
       description: "Designed a Power BI dashboard to capture and visualize real-time Twitter data, including tweet volume, engagement, media views, URL clicks, and hashtag performance, for actionable social media insights.",
