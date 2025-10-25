@@ -32,7 +32,7 @@ const Projects = () => {
       impact: "Interactive visualizations and a responsive mobile interface enabled seamless data exploration, providing actionable insights for social media strategy and maximizing user engagement across platforms.",
       category: "Social Analytics",
       link: "https://github.com/arpitbhuker/Twitter-Analytics-Dashboard"
-    }
+    },
     {
       id: 3,
       title: "Netflix Data Analysis",
@@ -80,7 +80,7 @@ const Projects = () => {
       impact: "This optimization reduced manual analysis time by 40%, improving decision-making efficiency and real-time tracking of sales performance.",
       category: "Business Intelligence",
       link: "https://github.com/arpitbhuker/Amazon-Sales-Dashboard"
-    },
+    }
   ];
 
   const ProjectCard = ({ project, index }: { project: any; index: number }) => {
