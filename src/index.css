@@ -190,7 +190,7 @@
   }
 }
 
-/* Section-based lighter glass variations */
+/* Section-based lighter glass variations 
 #about {
   --glass-bg: 230 20% 20%;
 }
@@ -230,3 +230,4 @@
     hsl(212 80% 67% / 0.05)
   );
 }
+*/
