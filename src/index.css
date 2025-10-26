@@ -105,13 +105,13 @@
 /* === THEME DISTRIBUTION === */
 
 /* === THEME A === */
-#hero,
+#home,
 #about,
 #projects,
 #contact {
   --glass-bg: 215 25% 20%;
 }
-#hero .bg-gradient-glow,
+#home .bg-gradient-glow,
 #about .bg-gradient-glow,
 #projects .bg-gradient-glow,
 #contact .bg-gradient-glow {
@@ -123,18 +123,30 @@
 }
 
 /* === THEME B === */
-#skills,
-#testimonials {
+#skills {
   --glass-bg: 215 25% 22%;
 }
-#skills .bg-gradient-glow,
-#testimonials .bg-gradient-glow {
+
+#skills .bg-gradient-glow {
   background: linear-gradient(
     135deg,
     hsl(195 75% 62% / 0.05),
     hsl(200 80% 63% / 0.05)
   );
 }
+
+[data-section="testimonials"] {
+  --glass-bg: 215 25% 22%;
+}
+
+[data-section="testimonials"] .bg-gradient-glow {
+  background: linear-gradient(
+    135deg,
+    hsl(195 75% 62% / 0.05),
+    hsl(200 80% 63% / 0.05)
+  );
+}
+ 
 
 @layer components {
   .glass-card {
