@@ -4,58 +4,66 @@
 
 @layer base {
   :root {
-    /* === PURE BLACK & WHITE THEME === */
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
+    /* === CORE DARK THEME === */
+    --background: 230 20% 10%;
+    --foreground: 220 15% 94%;
 
-    --card: 0 0% 5%;
-    --card-foreground: 0 0% 100%;
-    --popover: 0 0% 7%;
-    --popover-foreground: 0 0% 100%;
-    --primary: 0 0% 100%;
-    --primary-foreground: 0 0% 0%;
-    --secondary: 0 0% 10%;
-    --secondary-foreground: 0 0% 100%;
-    --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 80%;
-    --accent: 0 0% 25%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 70% 45%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 0 0% 20%;
-    --input: 0 0% 12%;
-    --ring: 0 0% 60%;
+    --card: 230 20% 13%;
+    --card-foreground: 220 15% 94%;
+    --popover: 230 20% 14%;
+    --popover-foreground: 220 15% 94%;
+
+    --primary: 195 70% 58%;
+    --primary-foreground: 230 20% 10%;
+    --secondary: 230 20% 18%;
+    --secondary-foreground: 220 15% 94%;
+
+    --muted: 230 15% 20%;
+    --muted-foreground: 220 10% 70%;
+
+    --accent: 198 70% 58%;
+    --accent-foreground: 230 20% 10%;
+
+    --destructive: 0 70% 58%;
+    --destructive-foreground: 220 15% 94%;
+
+    --border: 230 15% 22%;
+    --input: 230 15% 20%;
+    --ring: 198 70% 58%;
+
     --radius: 0.75rem;
 
-    /* === TEXT COLORS === */
-    --text-primary: 0 0% 100%;
-    --text-secondary: 0 0% 85%;
-    --text-muted: 0 0% 65%;
-
-    /* === GLASS / SHADOW === */
-    --glass-bg: 0 0% 8%;
-    --glass-border: hsl(0 0% 100% / 0.1);
-    --glass-shadow: 0 8px 32px hsl(0 0% 100% / 0.05);
+    /* === CUSTOM COLORS === */
+    --neon-cyan: 195 100% 68%;
+    --neon-blue: 215 90% 65%;
+    --neon-magenta: 300 80% 65%;
+    --neon-violet: 270 80% 65%;
+    --dark-surface: 230 20% 14%;
+    --glass-bg: 230 20% 13%;
+    --glow-primary: 198 70% 58%;
+    --text-primary: 220 15% 94%;
+    --text-secondary: 220 10% 80%;
+    --text-muted: 220 10% 65%;
 
     /* === GRADIENTS === */
-    --gradient-primary: linear-gradient(135deg, hsl(0 0% 15%), hsl(0 0% 0%));
-    --gradient-dark: linear-gradient(135deg, hsl(0 0% 0%), hsl(0 0% 10%));
-    --gradient-glow: linear-gradient(135deg, hsl(0 0% 100% / 0.1), hsl(0 0% 100% / 0.05));
+    --gradient-blue: linear-gradient(135deg, hsl(195 70% 58%), hsl(215 90% 65%));
+    --gradient-violet: linear-gradient(135deg, hsl(270 80% 65%), hsl(300 80% 65%));
+    --gradient-dark: linear-gradient(135deg, hsl(230 20% 10%), hsl(230 20% 14%));
+    --gradient-glow: linear-gradient(135deg, hsl(198 70% 58% / 0.1), hsl(215 90% 65% / 0.1));
 
-    /* === ANIMATION SPEED === */
+    /* === GLASS EFFECTS === */
+    --glass-border: hsl(198 70% 58% / 0.2);
+    --glass-shadow: 0 8px 32px hsl(198 70% 58% / 0.1);
+
+    /* === ANIMATION DURATIONS === */
     --animation-fast: 0.15s;
     --animation-normal: 0.3s;
     --animation-slow: 0.5s;
 
     /* === SHADOWS === */
-    --shadow-glow: 0 0 20px hsl(0 0% 100% / 0.15);
-    --shadow-card: 0 10px 40px hsl(0 0% 0% / 0.6);
-    --shadow-elevated: 0 20px 60px hsl(0 0% 0% / 0.8);
-  }
-
-  .dark {
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
+    --shadow-glow: 0 0 20px hsl(198 70% 58% / 0.3);
+    --shadow-card: 0 10px 40px hsl(230 20% 5% / 0.3);
+    --shadow-elevated: 0 20px 60px hsl(230 20% 5% / 0.4);
   }
 
   * {
@@ -74,43 +82,67 @@
   }
 }
 
-/* === SECTION BACKGROUNDS === */
+/* ====================================================== */
+/* === COLOR A SECTIONS — BLUE-CYAN THEME (Home/About/Skills) === */
+/* ====================================================== */
 
-/* HOME & ABOUT: Pure black center with soft faded edges (for photos) */
 #home,
-#about {
+#about,
+#skills {
+  background: hsl(230 20% 10%);
   position: relative;
-  background: radial-gradient(
-    circle at center,
-    hsl(0 0% 0%) 60%,
-    hsl(0 0% 5%) 85%,
-    hsl(0 0% 8%) 100%
-  );
 }
 
-/* Subtle overlay around photos for depth effect */
 #home::before,
 #about::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle, hsl(0 0% 0% / 0.4), transparent 70%);
-  pointer-events: none;
+  background: radial-gradient(
+    circle at center,
+    hsl(230 20% 5%) 0%,
+    hsl(230 20% 10%) 80%
+  );
   z-index: 0;
 }
 
-/* Other sections: Pure solid black */
-#projects,
-#skills,
-#contact,
-[data-section="testimonials"] {
-  background: hsl(0 0% 0%);
+#home .bg-gradient-glow,
+#about .bg-gradient-glow,
+#skills .bg-gradient-glow {
+  background: linear-gradient(
+    135deg,
+    hsl(195 70% 58% / 0.08),
+    hsl(215 90% 65% / 0.05)
+  );
 }
 
+/* ====================================================== */
+/* === COLOR B SECTIONS — VIOLET-MAGENTA THEME (Projects/Testimonials/Contact) === */
+/* ====================================================== */
+
+#projects,
+[data-section="testimonials"],
+#contact {
+  background: hsl(230 20% 10%);
+}
+
+#projects .bg-gradient-glow,
+[data-section="testimonials"] .bg-gradient-glow,
+#contact .bg-gradient-glow {
+  background: linear-gradient(
+    135deg,
+    hsl(270 80% 65% / 0.08),
+    hsl(300 80% 65% / 0.05)
+  );
+}
+
+/* ====================================================== */
 /* === COMPONENTS === */
+/* ====================================================== */
+
 @layer components {
   .glass-card {
-    background: linear-gradient(135deg, hsl(var(--glass-bg) / 0.12), hsl(var(--glass-bg) / 0.05));
+    background: linear-gradient(135deg, hsl(var(--glass-bg) / 0.1), hsl(var(--glass-bg) / 0.05));
     backdrop-filter: blur(20px);
     border: 1px solid hsl(var(--glass-border));
     box-shadow: var(--glass-shadow);
@@ -126,25 +158,35 @@
     box-shadow: var(--shadow-elevated);
   }
 
-  .neon-glow {
-    text-shadow: 0 0 10px hsl(0 0% 100% / 0.4), 0 0 20px hsl(0 0% 100% / 0.2);
+  .neon-glow-blue {
+    box-shadow: 0 0 20px hsl(var(--neon-blue) / 0.4),
+                0 0 40px hsl(var(--neon-cyan) / 0.25),
+                0 0 60px hsl(var(--neon-cyan) / 0.15);
   }
 
-  .gradient-text {
-    background: var(--gradient-primary);
+  .neon-glow-violet {
+    box-shadow: 0 0 20px hsl(var(--neon-violet) / 0.4),
+                0 0 40px hsl(var(--neon-magenta) / 0.25),
+                0 0 60px hsl(var(--neon-magenta) / 0.15);
+  }
+
+  .gradient-text-blue {
+    background: var(--gradient-blue);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
-  .parallax {
-    transform-style: preserve-3d;
-    perspective: 1000px;
+  .gradient-text-violet {
+    background: var(--gradient-violet);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .animated-border {
     position: relative;
-    background: linear-gradient(135deg, hsl(0 0% 0%), hsl(0 0% 8%));
+    background: linear-gradient(135deg, hsl(var(--dark-surface)), hsl(var(--dark-surface)));
     border: 1px solid transparent;
   }
 
@@ -154,7 +196,7 @@
     top: 0; left: 0; right: 0; bottom: 0;
     border-radius: inherit;
     padding: 1px;
-    background: var(--gradient-primary);
+    background: var(--gradient-blue);
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask-composite: exclude;
     -webkit-mask-composite: xor;
