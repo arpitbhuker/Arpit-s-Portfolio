@@ -102,20 +102,27 @@
   }
 }
 
-/* === THEME DISTRIBUTION === */
+/* === GLOBAL CYBER NOIR FOUNDATION === */
+:root {
+  --base-dark: hsl(216 28% 7%);      /* deep midnight */
+  --base-darker: hsl(218 30% 6%);    /* used for contrast sections */
+  --base-mid: hsl(218 28% 10%);      /* smooth transitional tone */
+  --cyan-accent: hsl(196 100% 47%);  /* electric cyan */
+  --cyan-soft: hsl(195 80% 65% / 0.06);
+  --glass-bg: 215 25% 20%;
+}
 
-/* === THEME A: HOME + ABOUT unified gradient for seamless blend === */
+/* === SECTION GROUP A: HOME + ABOUT === */
+/* sleek, glowing, confident intro atmosphere */
 #home,
 #about {
   position: relative;
   isolation: isolate;
-  --glass-bg: 215 25% 20%;
   background: linear-gradient(
     180deg,
-    hsl(230 20% 10%) 0%,
-    hsl(230 20% 12%) 25%,
-    hsl(230 20% 13%) 60%,
-    hsl(230 20% 14%) 100%
+    var(--base-dark) 0%,
+    hsl(218 25% 8%) 40%,
+    var(--base-mid) 100%
   );
 }
 
@@ -123,12 +130,12 @@
 #about .bg-gradient-glow {
   background: linear-gradient(
     135deg,
-    hsl(194 70% 60% / 0.05),
-    hsl(220 100% 65% / 0.05)
+    hsl(195 70% 60% / 0.08),
+    hsl(200 80% 63% / 0.06)
   );
 }
 
-/* Dynamic pulse layer for subtle cyan glow motion */
+/* dynamic moving glow layer */
 #home::before,
 #about::before {
   content: "";
@@ -137,53 +144,66 @@
   z-index: -1;
   background: radial-gradient(
     circle at 50% 20%,
-    hsl(195 70% 60% / 0.08),
+    hsl(195 70% 60% / 0.10),
     transparent 70%
   );
-  animation: pulseGradient 8s ease-in-out infinite alternate;
+  animation: pulseGradient 10s ease-in-out infinite alternate;
 }
 
-@keyframes pulseGradient {
-  0% {
-    opacity: 0.4;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 0.7;
-    transform: scale(1.1);
-  }
-}
-
-/* === THEME B: SKILLS distinct layer === */
-#skills {
-  --glass-bg: 215 25% 22%;
+/* === SECTION GROUP B: SKILLS + PROJECTS === */
+/* slightly darker cyber noir tone for focus contrast */
+#skills,
+#projects {
+  position: relative;
+  isolation: isolate;
   background: linear-gradient(
     180deg,
-    hsl(230 20% 14%) 0%,
-    hsl(230 20% 12%) 100%
+    var(--base-mid) 0%,
+    var(--base-darker) 100%
   );
 }
 
-#skills .bg-gradient-glow {
+#skills .bg-gradient-glow,
+#projects .bg-gradient-glow {
   background: linear-gradient(
     135deg,
-    hsl(195 75% 62% / 0.05),
-    hsl(200 80% 63% / 0.05)
+    hsl(196 100% 47% / 0.06),
+    hsl(200 90% 60% / 0.05)
   );
 }
 
-/* === THEME C: PROJECTS + CONTACT unified subtle cyan flow === */
-#projects,
-#contact {
-  --glass-bg: 215 25% 21%;
+/* === SECTION C: TESTIMONIALS === */
+/* distinctly darker, cinematic tone to add depth break */
+[data-section="testimonials"] {
+  position: relative;
+  isolation: isolate;
   background: linear-gradient(
     180deg,
-    hsl(230 20% 12%) 0%,
-    hsl(230 20% 10%) 100%
+    hsl(220 28% 5%) 0%,
+    hsl(220 28% 6%) 100%
   );
 }
 
-#projects .bg-gradient-glow,
+[data-section="testimonials"] .bg-gradient-glow {
+  background: linear-gradient(
+    135deg,
+    hsl(195 70% 60% / 0.04),
+    hsl(220 100% 65% / 0.03)
+  );
+}
+
+/* === SECTION D: CONTACT === */
+/* similar warmth as About for emotional closure */
+#contact {
+  position: relative;
+  isolation: isolate;
+  background: linear-gradient(
+    180deg,
+    var(--base-mid) 0%,
+    var(--base-dark) 100%
+  );
+}
+
 #contact .bg-gradient-glow {
   background: linear-gradient(
     135deg,
@@ -192,25 +212,17 @@
   );
 }
 
-/* === OPTIONAL TESTIMONIALS SECTION (for continuity) === */
-[data-section="testimonials"] {
-  --glass-bg: 215 25% 22%;
-  background: linear-gradient(
-    180deg,
-    hsl(230 20% 14%) 0%,
-    hsl(230 20% 12%) 100%
-  );
+/* === DYNAMIC ANIMATION === */
+@keyframes pulseGradient {
+  0% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
 }
-
-[data-section="testimonials"] .bg-gradient-glow {
-  background: linear-gradient(
-    135deg,
-    hsl(195 75% 62% / 0.05),
-    hsl(200 80% 63% / 0.05)
-  );
-}
-
- 
 
 @layer components {
   .glass-card {
