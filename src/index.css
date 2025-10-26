@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @layer base {
   :root {
     /* === PURE BLACK & WHITE THEME === */
@@ -40,7 +44,7 @@
     --glass-border: hsl(0 0% 100% / 0.1);
     --glass-shadow: 0 8px 32px hsl(0 0% 100% / 0.05);
 
-    /* === GRADIENTS (for subtle lighting) === */
+    /* === GRADIENTS === */
     --gradient-primary: linear-gradient(135deg, hsl(0 0% 15%), hsl(0 0% 0%));
     --gradient-dark: linear-gradient(135deg, hsl(0 0% 0%), hsl(0 0% 10%));
     --gradient-glow: linear-gradient(135deg, hsl(0 0% 100% / 0.1), hsl(0 0% 100% / 0.05));
@@ -61,7 +65,9 @@
     --foreground: 0 0% 100%;
   }
 
-  * { @apply border-border; }
+  * {
+    @apply border-border;
+  }
 
   body {
     @apply bg-background text-foreground overflow-x-hidden;
@@ -70,5 +76,116 @@
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
 
-  html { scroll-behavior: smooth; }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* === SECTION BACKGROUNDS === */
+#home, #about, #projects, #contact {
+  background: linear-gradient(
+    180deg,
+    hsl(0 0% 0%),
+    hsl(0 0% 5%) 50%,
+    hsl(0 0% 10%)
+  );
+}
+
+#skills, [data-section="testimonials"] {
+  background: linear-gradient(
+    180deg,
+    hsl(0 0% 10%),
+    hsl(0 0% 12%) 50%,
+    hsl(0 0% 15%)
+  );
+}
+
+/* === SECTION BLENDING EFFECTS === */
+#about::after,
+#skills::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to bottom, hsl(0 0% 0% / 0.35), hsl(0 0% 10% / 0));
+  pointer-events: none;
+}
+
+@layer components {
+  .glass-card {
+    background: linear-gradient(135deg, hsl(var(--glass-bg) / 0.12), hsl(var(--glass-bg) / 0.05));
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--glass-border));
+    box-shadow: var(--glass-shadow);
+  }
+
+  .hover-3d {
+    transition: all var(--animation-normal) cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+  }
+  .hover-3d:hover {
+    transform: perspective(1000px) rotateX(5deg) rotateY(5deg) translateZ(20px);
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .neon-glow {
+    text-shadow: 0 0 10px hsl(0 0% 100% / 0.4), 0 0 20px hsl(0 0% 100% / 0.2);
+  }
+
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .parallax {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+
+  .animated-border {
+    position: relative;
+    background: linear-gradient(135deg, hsl(0 0% 0%), hsl(0 0% 8%));
+    border: 1px solid transparent;
+  }
+
+  .animated-border::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: var(--gradient-primary);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    -webkit-mask-composite: xor;
+    animation: rotate-border 3s linear infinite;
+  }
+
+  @keyframes rotate-border {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
