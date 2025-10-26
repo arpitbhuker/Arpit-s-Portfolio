@@ -2,91 +2,90 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   :root {
-    /* Dark Portfolio Theme */
-    --background: 215 25% 8%;
-    --foreground: 210 40% 98%;
+    /* Dark Portfolio Theme (Refined for Clarity & Accessibility) */
+    --background: 230 20% 10%; /* #0F0F1A — softer dark gray for comfort */
+    --foreground: 220 15% 94%; /* #F0F0F5 — off-white text, reduces strain */
 
-    --card: 215 25% 10%;
-    --card-foreground: 210 40% 98%;
+    --card: 230 20% 13%;
+    --card-foreground: 220 15% 94%;
 
-    --popover: 215 25% 12%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 230 20% 14%;
+    --popover-foreground: 220 15% 94%;
 
-    --primary: 194 70% 60%;
-    --primary-foreground: 215 25% 8%;
+    --primary: 195 70% 58%; /* slightly desaturated cyan for subtle accents */
+    --primary-foreground: 230 20% 10%;
 
-    --secondary: 215 20% 15%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 230 20% 18%;
+    --secondary-foreground: 220 15% 94%;
 
-    --muted: 215 20% 12%;
-    --muted-foreground: 215 15% 65%;
+    --muted: 230 15% 20%;
+    --muted-foreground: 220 10% 70%;
 
-    --accent: 194 70% 60%;
-    --accent-foreground: 215 25% 8%;
+    --accent: 198 70% 58%; /* balanced cyan-blue tone */
+    --accent-foreground: 230 20% 10%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 70% 58%;
+    --destructive-foreground: 220 15% 94%;
 
-    --border: 215 20% 18%;
-    --input: 215 20% 15%;
-    --ring: 194 70% 60%;
+    --border: 230 15% 22%;
+    --input: 230 15% 20%;
+    --ring: 198 70% 58%;
 
     --radius: 0.75rem;
 
-    /* Custom Portfolio Colors */
-    --neon-cyan: 194 100% 70%;
-    --neon-blue: 220 100% 65%;
-    --dark-surface: 215 25% 12%;
-    --glass-bg: 215 25% 10%;
-    --glow-primary: 194 70% 60%;
-    --text-primary: 210 40% 98%;
-    --text-secondary: 215 15% 75%;
-    --text-muted: 215 15% 55%;
-    
+    /* Custom Portfolio Colors (Updated for harmony) */
+    --neon-cyan: 195 100% 68%;
+    --neon-blue: 215 90% 65%;
+    --dark-surface: 230 20% 14%;
+    --glass-bg: 230 20% 13%;
+    --glow-primary: 198 70% 58%;
+    --text-primary: 220 15% 94%;
+    --text-secondary: 220 10% 80%;
+    --text-muted: 220 10% 65%;
+
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(194 70% 60%), hsl(220 100% 65%));
-    --gradient-dark: linear-gradient(135deg, hsl(215 25% 8%), hsl(215 25% 12%));
-    --gradient-glow: linear-gradient(135deg, hsl(194 70% 60% / 0.1), hsl(220 100% 65% / 0.1));
-    
+    --gradient-primary: linear-gradient(135deg, hsl(195 70% 58%), hsl(215 90% 65%));
+    --gradient-dark: linear-gradient(135deg, hsl(230 20% 10%), hsl(230 20% 14%));
+    --gradient-glow: linear-gradient(135deg, hsl(198 70% 58% / 0.1), hsl(215 90% 65% / 0.1));
+
     /* Glass Effects */
-    --glass-border: hsl(194 70% 60% / 0.2);
-    --glass-shadow: 0 8px 32px hsl(194 70% 60% / 0.1);
-    
+    --glass-border: hsl(198 70% 58% / 0.2);
+    --glass-shadow: 0 8px 32px hsl(198 70% 58% / 0.1);
+
     /* Animation Durations */
     --animation-fast: 0.15s;
     --animation-normal: 0.3s;
     --animation-slow: 0.5s;
-    
+
     /* Shadows */
-    --shadow-glow: 0 0 20px hsl(194 70% 60% / 0.3);
-    --shadow-card: 0 10px 40px hsl(215 25% 4% / 0.3);
-    --shadow-elevated: 0 20px 60px hsl(215 25% 4% / 0.4);
+    --shadow-glow: 0 0 20px hsl(198 70% 58% / 0.3);
+    --shadow-card: 0 10px 40px hsl(230 20% 5% / 0.3);
+    --shadow-elevated: 0 20px 60px hsl(230 20% 5% / 0.4);
   }
 
   /* Force dark theme - no light mode needed */
   .dark {
-    --background: 215 25% 8%;
-    --foreground: 210 40% 98%;
-    --card: 215 25% 10%;
-    --card-foreground: 210 40% 98%;
-    --popover: 215 25% 12%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 194 70% 60%;
-    --primary-foreground: 215 25% 8%;
-    --secondary: 215 20% 15%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 215 20% 12%;
-    --muted-foreground: 215 15% 65%;
-    --accent: 194 70% 60%;
-    --accent-foreground: 215 25% 8%;
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 215 20% 18%;
-    --input: 215 20% 15%;
-    --ring: 194 70% 60%;
+    --background: 230 20% 10%;
+    --foreground: 220 15% 94%;
+    --card: 230 20% 13%;
+    --card-foreground: 220 15% 94%;
+    --popover: 230 20% 14%;
+    --popover-foreground: 220 15% 94%;
+    --primary: 195 70% 58%;
+    --primary-foreground: 230 20% 10%;
+    --secondary: 230 20% 18%;
+    --secondary-foreground: 220 15% 94%;
+    --muted: 230 15% 20%;
+    --muted-foreground: 220 10% 70%;
+    --accent: 198 70% 58%;
+    --accent-foreground: 230 20% 10%;
+    --destructive: 0 70% 58%;
+    --destructive-foreground: 220 15% 94%;
+    --border: 230 15% 22%;
+    --input: 230 15% 20%;
+    --ring: 198 70% 58%;
   }
 }
 
@@ -101,60 +100,54 @@
     color: hsl(var(--foreground));
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
-  
+
   html {
     scroll-behavior: smooth;
   }
 }
 
 @layer components {
-  /* Glass morphism cards */
   .glass-card {
     background: linear-gradient(135deg, hsl(var(--glass-bg) / 0.1), hsl(var(--glass-bg) / 0.05));
     backdrop-filter: blur(20px);
     border: 1px solid hsl(var(--glass-border));
     box-shadow: var(--glass-shadow);
   }
-  
-  /* 3D hover effects */
+
   .hover-3d {
     transition: all var(--animation-normal) cubic-bezier(0.4, 0, 0.2, 1);
     transform-style: preserve-3d;
   }
-  
+
   .hover-3d:hover {
     transform: perspective(1000px) rotateX(5deg) rotateY(5deg) translateZ(20px);
     box-shadow: var(--shadow-elevated);
   }
-  
-  /* Neon glow effects */
+
   .neon-glow {
-    box-shadow: 0 0 20px hsl(var(--neon-cyan) / 0.5), 
-                0 0 40px hsl(var(--neon-cyan) / 0.3),
-                0 0 60px hsl(var(--neon-cyan) / 0.2);
+    box-shadow: 0 0 20px hsl(var(--neon-cyan) / 0.4),
+                0 0 40px hsl(var(--neon-cyan) / 0.25),
+                0 0 60px hsl(var(--neon-cyan) / 0.15);
   }
-  
-  /* Gradient text */
+
   .gradient-text {
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  
-  /* Parallax container */
+
   .parallax {
     transform-style: preserve-3d;
     perspective: 1000px;
   }
-  
-  /* Animated border */
+
   .animated-border {
     position: relative;
     background: linear-gradient(135deg, hsl(var(--dark-surface)), hsl(var(--dark-surface)));
     border: 1px solid transparent;
   }
-  
+
   .animated-border::before {
     content: '';
     position: absolute;
@@ -170,82 +163,70 @@
     -webkit-mask-composite: xor;
     animation: rotate-border 3s linear infinite;
   }
-  
+
   @keyframes rotate-border {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
   }
-  
-  /* Floating animation */
+
   .float {
     animation: float 3s ease-in-out infinite;
   }
-  
+
   @keyframes float {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-10px); }
   }
-  
-  /* Scroll reveal animations */
+
   .reveal {
     opacity: 0;
     transform: translateY(50px);
     transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  
+
   .reveal.revealed {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-
+/* Section-based lighter glass variations */
 #about {
-  --glass-bg: 215 25% 20%; 
+  --glass-bg: 230 20% 20%;
 }
-
 #about .bg-gradient-glow {
-  background: linear-gradient(
-    135deg,
-    hsl(194 70% 60% / 0.05),
-    hsl(220 100% 65% / 0.05)
+  background: linear-gradient(135deg,
+    hsl(195 70% 58% / 0.05),
+    hsl(215 90% 65% / 0.05)
   );
 }
 
 #skills {
-  --glass-bg: 215 25% 22%; 
+  --glass-bg: 230 20% 22%;
 }
-
 #skills .bg-gradient-glow {
-  background: linear-gradient(
-    135deg,
-    hsl(195 75% 62% / 0.05),
-    hsl(200 80% 63% / 0.05)
+  background: linear-gradient(135deg,
+    hsl(196 75% 60% / 0.05),
+    hsl(208 80% 64% / 0.05)
   );
 }
-
 
 #projects {
-  --glass-bg: 215 25% 23%;
+  --glass-bg: 230 20% 23%;
 }
-
 #projects .bg-gradient-glow {
-  background: linear-gradient(
-    135deg,
-    hsl(196 75% 63% / 0.05),
-    hsl(202 80% 64% / 0.05)
+  background: linear-gradient(135deg,
+    hsl(197 75% 61% / 0.05),
+    hsl(210 80% 66% / 0.05)
   );
 }
 
-
 #contact {
-  --glass-bg: 215 25% 24%;
+  --glass-bg: 230 20% 24%;
 }
-
 #contact .bg-gradient-glow {
-  background: linear-gradient(
-    135deg,
-    hsl(197 75% 64% / 0.05),
-    hsl(204 80% 65% / 0.05)
+  background: linear-gradient(135deg,
+    hsl(198 75% 62% / 0.05),
+    hsl(212 80% 67% / 0.05)
   );
 }
