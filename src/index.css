@@ -5,33 +5,26 @@
 @layer base {
   :root {
     /* === PURE BLACK & WHITE THEME === */
-    --background: 0 0% 0%;           /* pure black */
-    --foreground: 0 0% 100%;         /* pure white */
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
 
     --card: 0 0% 5%;
     --card-foreground: 0 0% 100%;
     --popover: 0 0% 7%;
     --popover-foreground: 0 0% 100%;
-
     --primary: 0 0% 100%;
     --primary-foreground: 0 0% 0%;
-
     --secondary: 0 0% 10%;
     --secondary-foreground: 0 0% 100%;
-
     --muted: 0 0% 12%;
     --muted-foreground: 0 0% 80%;
-
     --accent: 0 0% 25%;
     --accent-foreground: 0 0% 100%;
-
     --destructive: 0 70% 45%;
     --destructive-foreground: 0 0% 100%;
-
     --border: 0 0% 20%;
     --input: 0 0% 12%;
     --ring: 0 0% 60%;
-
     --radius: 0.75rem;
 
     /* === TEXT COLORS === */
@@ -82,36 +75,39 @@
 }
 
 /* === SECTION BACKGROUNDS === */
-#home, #about, #projects, #contact {
-  background: linear-gradient(
-    180deg,
-    hsl(0 0% 0%),
-    hsl(0 0% 5%) 50%,
-    hsl(0 0% 10%)
+
+/* HOME & ABOUT: Pure black center with soft faded edges (for photos) */
+#home,
+#about {
+  position: relative;
+  background: radial-gradient(
+    circle at center,
+    hsl(0 0% 0%) 60%,
+    hsl(0 0% 5%) 85%,
+    hsl(0 0% 8%) 100%
   );
 }
 
-#skills, [data-section="testimonials"] {
-  background: linear-gradient(
-    180deg,
-    hsl(0 0% 10%),
-    hsl(0 0% 12%) 50%,
-    hsl(0 0% 15%)
-  );
-}
-
-/* === SECTION BLENDING EFFECTS === */
-#about::after,
-#skills::before {
+/* Subtle overlay around photos for depth effect */
+#home::before,
+#about::before {
   content: '';
   position: absolute;
-  left: 0;
-  right: 0;
-  height: 100px;
-  background: linear-gradient(to bottom, hsl(0 0% 0% / 0.35), hsl(0 0% 10% / 0));
+  inset: 0;
+  background: radial-gradient(circle, hsl(0 0% 0% / 0.4), transparent 70%);
   pointer-events: none;
+  z-index: 0;
 }
 
+/* Other sections: Pure solid black */
+#projects,
+#skills,
+#contact,
+[data-section="testimonials"] {
+  background: hsl(0 0% 0%);
+}
+
+/* === COMPONENTS === */
 @layer components {
   .glass-card {
     background: linear-gradient(135deg, hsl(var(--glass-bg) / 0.12), hsl(var(--glass-bg) / 0.05));
@@ -124,6 +120,7 @@
     transition: all var(--animation-normal) cubic-bezier(0.4, 0, 0.2, 1);
     transform-style: preserve-3d;
   }
+
   .hover-3d:hover {
     transform: perspective(1000px) rotateX(5deg) rotateY(5deg) translateZ(20px);
     box-shadow: var(--shadow-elevated);
