@@ -190,25 +190,18 @@
   }
 }
 
-/* Section-based lighter glass variations */
-
-#hero {
-  --glass-bg: 230 25% 25%; 
-}
-
-#hero .bg-gradient-glow {
-  background: linear-gradient(
-    135deg,
-    hsl(200 80% 65% / 0.1),   
-    hsl(220 90% 70% / 0.08)   
-  );
-}
-
-#about {
+/* === THEME A === */
+#hero,
+#about,
+#projects,
+#contact {
   --glass-bg: 215 25% 20%; 
 }
 
-#about .bg-gradient-glow {
+#hero .bg-gradient-glow,
+#about .bg-gradient-glow,
+#projects .bg-gradient-glow,
+#contact .bg-gradient-glow {
   background: linear-gradient(
     135deg,
     hsl(194 70% 60% / 0.05),
@@ -216,11 +209,14 @@
   );
 }
 
-#skills {
+/* === THEME B === */
+#skills,
+#testimonials {
   --glass-bg: 215 25% 22%; 
 }
 
-#skills .bg-gradient-glow {
+#skills .bg-gradient-glow,
+#testimonials .bg-gradient-glow {
   background: linear-gradient(
     135deg,
     hsl(195 75% 62% / 0.05),
@@ -228,40 +224,3 @@
   );
 }
 
-
-#projects {
-  --glass-bg: 215 25% 23%;
-}
-
-#projects .bg-gradient-glow {
-  background: linear-gradient(
-    135deg,
-    hsl(196 75% 63% / 0.05),
-    hsl(202 80% 64% / 0.05)
-  );
-}
-
-#testimonials {
-  --glass-bg: 230 20% 23.5%;
-}
-
-#testimonials .bg-gradient-glow {
-  background: linear-gradient(
-    135deg,
-    hsl(198 70% 63% / 0.05),
-    hsl(210 80% 66% / 0.05)
-  );
-}
-
-
-#contact {
-  --glass-bg: 215 25% 24%;
-}
-
-#contact .bg-gradient-glow {
-  background: linear-gradient(
-    135deg,
-    hsl(197 75% 64% / 0.05),
-    hsl(204 80% 65% / 0.05)
-  );
-}
