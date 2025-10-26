@@ -104,17 +104,23 @@
 
 /* === THEME DISTRIBUTION === */
 
-/* === THEME A === */
+/* === THEME A: HOME + ABOUT unified gradient for seamless blend === */
 #home,
-#about,
-#projects,
-#contact {
+#about {
+  position: relative;
+  isolation: isolate;
   --glass-bg: 215 25% 20%;
+  background: linear-gradient(
+    180deg,
+    hsl(230 20% 10%) 0%,
+    hsl(230 20% 12%) 25%,
+    hsl(230 20% 13%) 60%,
+    hsl(230 20% 14%) 100%
+  );
 }
+
 #home .bg-gradient-glow,
-#about .bg-gradient-glow,
-#projects .bg-gradient-glow,
-#contact .bg-gradient-glow {
+#about .bg-gradient-glow {
   background: linear-gradient(
     135deg,
     hsl(194 70% 60% / 0.05),
@@ -122,9 +128,40 @@
   );
 }
 
-/* === THEME B === */
+/* Dynamic pulse layer for subtle cyan glow motion */
+#home::before,
+#about::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: radial-gradient(
+    circle at 50% 20%,
+    hsl(195 70% 60% / 0.08),
+    transparent 70%
+  );
+  animation: pulseGradient 8s ease-in-out infinite alternate;
+}
+
+@keyframes pulseGradient {
+  0% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+}
+
+/* === THEME B: SKILLS distinct layer === */
 #skills {
   --glass-bg: 215 25% 22%;
+  background: linear-gradient(
+    180deg,
+    hsl(230 20% 14%) 0%,
+    hsl(230 20% 12%) 100%
+  );
 }
 
 #skills .bg-gradient-glow {
@@ -135,8 +172,34 @@
   );
 }
 
+/* === THEME C: PROJECTS + CONTACT unified subtle cyan flow === */
+#projects,
+#contact {
+  --glass-bg: 215 25% 21%;
+  background: linear-gradient(
+    180deg,
+    hsl(230 20% 12%) 0%,
+    hsl(230 20% 10%) 100%
+  );
+}
+
+#projects .bg-gradient-glow,
+#contact .bg-gradient-glow {
+  background: linear-gradient(
+    135deg,
+    hsl(194 70% 60% / 0.05),
+    hsl(220 100% 65% / 0.05)
+  );
+}
+
+/* === OPTIONAL TESTIMONIALS SECTION (for continuity) === */
 [data-section="testimonials"] {
   --glass-bg: 215 25% 22%;
+  background: linear-gradient(
+    180deg,
+    hsl(230 20% 14%) 0%,
+    hsl(230 20% 12%) 100%
+  );
 }
 
 [data-section="testimonials"] .bg-gradient-glow {
@@ -146,6 +209,7 @@
     hsl(200 80% 63% / 0.05)
   );
 }
+
  
 
 @layer components {
