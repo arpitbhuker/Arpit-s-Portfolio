@@ -192,45 +192,52 @@
 
 /* Section-based lighter glass variations */
 
-#hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
+#hero {
+  --glass-bg: 230 25% 25%; 
+}
+
+#hero .bg-gradient-glow {
   background: linear-gradient(
-    180deg,
-    hsl(230 25% 10% / 0.8),
-    hsl(230 25% 8% / 0.95)
+    135deg,
+    hsl(200 80% 65% / 0.1),   
+    hsl(220 90% 70% / 0.08)   
   );
-  z-index: 0;
 }
 
 #about {
-  --glass-bg: 230 20% 20%;
+  --glass-bg: 215 25% 20%; 
 }
+
 #about .bg-gradient-glow {
-  background: linear-gradient(135deg,
-    hsl(195 70% 58% / 0.05),
-    hsl(215 90% 65% / 0.05)
+  background: linear-gradient(
+    135deg,
+    hsl(194 70% 60% / 0.05),
+    hsl(220 100% 65% / 0.05)
   );
 }
 
 #skills {
-  --glass-bg: 230 20% 22%;
+  --glass-bg: 215 25% 22%; 
 }
+
 #skills .bg-gradient-glow {
-  background: linear-gradient(135deg,
-    hsl(196 75% 60% / 0.05),
-    hsl(208 80% 64% / 0.05)
+  background: linear-gradient(
+    135deg,
+    hsl(195 75% 62% / 0.05),
+    hsl(200 80% 63% / 0.05)
   );
 }
 
+
 #projects {
-  --glass-bg: 230 20% 23%;
+  --glass-bg: 215 25% 23%;
 }
+
 #projects .bg-gradient-glow {
-  background: linear-gradient(135deg,
-    hsl(197 75% 61% / 0.05),
-    hsl(210 80% 66% / 0.05)
+  background: linear-gradient(
+    135deg,
+    hsl(196 75% 63% / 0.05),
+    hsl(202 80% 64% / 0.05)
   );
 }
 
@@ -248,11 +255,13 @@
 
 
 #contact {
-  --glass-bg: 230 20% 24%;
+  --glass-bg: 215 25% 24%;
 }
+
 #contact .bg-gradient-glow {
-  background: linear-gradient(135deg,
-    hsl(198 75% 62% / 0.05),
-    hsl(212 80% 67% / 0.05)
+  background: linear-gradient(
+    135deg,
+    hsl(197 75% 64% / 0.05),
+    hsl(204 80% 65% / 0.05)
   );
 }
