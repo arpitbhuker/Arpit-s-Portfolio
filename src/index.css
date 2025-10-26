@@ -36,9 +36,6 @@
     /* === CUSTOM COLORS === */
     --neon-cyan: 195 100% 68%;
     --neon-blue: 215 90% 65%;
-    --neon-teal: 185 80% 60%; /* NEW: Slightly greener cyan for variation */
-    --neon-aqua: 175 75% 55%; /* NEW: For subtle tone separation */
-
     --dark-surface: 230 20% 14%;
     --glass-bg: 230 20% 13%;
     --glow-primary: 198 70% 58%;
@@ -47,8 +44,7 @@
     --text-muted: 220 10% 65%;
 
     /* === GRADIENTS === */
-    --gradient-blue: linear-gradient(135deg, hsl(195 70% 58%), hsl(215 90% 65%));
-    --gradient-teal: linear-gradient(135deg, hsl(185 80% 60%), hsl(175 75% 55%)); /* NEW for Projects/Test/Contact */
+    --gradient-primary: linear-gradient(135deg, hsl(195 70% 58%), hsl(215 90% 65%));
     --gradient-dark: linear-gradient(135deg, hsl(230 20% 10%), hsl(230 20% 14%));
     --gradient-glow: linear-gradient(135deg, hsl(198 70% 58% / 0.1), hsl(215 90% 65% / 0.1));
 
@@ -67,6 +63,29 @@
     --shadow-elevated: 0 20px 60px hsl(230 20% 5% / 0.4);
   }
 
+  /* Force dark mode only */
+  .dark {
+    --background: 230 20% 10%;
+    --foreground: 220 15% 94%;
+    --card: 230 20% 13%;
+    --card-foreground: 220 15% 94%;
+    --popover: 230 20% 14%;
+    --popover-foreground: 220 15% 94%;
+    --primary: 195 70% 58%;
+    --primary-foreground: 230 20% 10%;
+    --secondary: 230 20% 18%;
+    --secondary-foreground: 220 15% 94%;
+    --muted: 230 15% 20%;
+    --muted-foreground: 220 10% 70%;
+    --accent: 198 70% 58%;
+    --accent-foreground: 230 20% 10%;
+    --destructive: 0 70% 58%;
+    --destructive-foreground: 220 15% 94%;
+    --border: 230 15% 22%;
+    --input: 230 15% 20%;
+    --ring: 198 70% 58%;
+  }
+
   * {
     @apply border-border;
   }
@@ -83,78 +102,51 @@
   }
 }
 
-/* ====================================================== */
-/* === COLOR A SECTIONS — BLUE-CYAN THEME (Home/About/Skills) === */
-/* ====================================================== */
+/* === THEME DISTRIBUTION === */
 
+/* === THEME A === */
 #home,
 #about,
-#skills {
-  background: hsl(230 20% 10%);
-  position: relative;
+#projects,
+#contact {
+  --glass-bg: 215 25% 20%;
 }
-
-#home::before,
-#about::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at center,
-    hsl(230 20% 5%) 0%,
-    hsl(230 20% 10%) 80%
-  );
-  z-index: 0;
-}
-
 #home .bg-gradient-glow,
 #about .bg-gradient-glow,
-#skills .bg-gradient-glow {
-  background: linear-gradient(
-    135deg,
-    hsl(195 70% 58% / 0.08),
-    hsl(215 90% 65% / 0.05)
-  );
-}
-
-/* ====================================================== */
-/* === COLOR B SECTIONS — TEAL-AQUA THEME (Projects/Testimonials/Contact) === */
-/* ====================================================== */
-
-#projects,
-[data-section="testimonials"],
-#contact {
-  background: hsl(230 20% 11%);
-  position: relative;
-}
-
-#projects::before,
-[data-section="testimonials"]::before,
-#contact::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at top,
-    hsl(185 80% 60% / 0.05),
-    hsl(230 20% 10%) 85%
-  );
-  z-index: 0;
-}
-
 #projects .bg-gradient-glow,
-[data-section="testimonials"] .bg-gradient-glow,
 #contact .bg-gradient-glow {
   background: linear-gradient(
     135deg,
-    hsl(185 80% 60% / 0.08),
-    hsl(175 75% 55% / 0.05)
+    hsl(194 70% 60% / 0.05),
+    hsl(220 100% 65% / 0.05)
   );
 }
 
-/* ====================================================== */
-/* === COMPONENTS === */
-/* ====================================================== */
+/* === THEME B === */
+#skills {
+  --glass-bg: 215 25% 22%;
+}
+
+#skills .bg-gradient-glow {
+  background: linear-gradient(
+    135deg,
+    hsl(195 75% 62% / 0.05),
+    hsl(200 80% 63% / 0.05)
+  );
+}
+
+[data-section="testimonials"] {
+  --glass-bg: 215 25% 22%;
+}
+
+[data-section="testimonials"] .bg-gradient-glow {
+  background: linear-gradient(
+    135deg,
+    hsl(195 75% 62% / 0.05),
+    hsl(200 80% 63% / 0.05)
+  );
+}
+ 
 
 @layer components {
   .glass-card {
@@ -174,30 +166,22 @@
     box-shadow: var(--shadow-elevated);
   }
 
-  .neon-glow-blue {
-    box-shadow: 0 0 20px hsl(var(--neon-blue) / 0.4),
+  .neon-glow {
+    box-shadow: 0 0 20px hsl(var(--neon-cyan) / 0.4),
                 0 0 40px hsl(var(--neon-cyan) / 0.25),
                 0 0 60px hsl(var(--neon-cyan) / 0.15);
   }
 
-  .neon-glow-teal {
-    box-shadow: 0 0 20px hsl(var(--neon-teal) / 0.4),
-                0 0 40px hsl(var(--neon-aqua) / 0.25),
-                0 0 60px hsl(var(--neon-aqua) / 0.15);
-  }
-
-  .gradient-text-blue {
-    background: var(--gradient-blue);
+  .gradient-text {
+    background: var(--gradient-primary);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
-  .gradient-text-teal {
-    background: var(--gradient-teal);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+  .parallax {
+    transform-style: preserve-3d;
+    perspective: 1000px;
   }
 
   .animated-border {
@@ -209,10 +193,13 @@
   .animated-border::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     border-radius: inherit;
     padding: 1px;
-    background: var(--gradient-teal);
+    background: var(--gradient-primary);
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask-composite: exclude;
     -webkit-mask-composite: xor;
