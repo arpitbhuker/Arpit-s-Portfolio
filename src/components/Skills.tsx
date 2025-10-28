@@ -2,8 +2,12 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import {
   Code,
-  Database,
+  Code2,
   BarChart3,
+  Cpu,
+  MessageSquareCode,
+  Database,
+  UserCheck,
   Brain,
   Users,
   Award,
@@ -105,84 +109,91 @@ const Skills = () => {
     {
       title: "Programming & Tools",
       items: [
-        { name: "Python", icon: Code },
-        { name: "SQL", icon: Database },
-        { name: "C++", icon: Code },
-        { name: "Jupyter Notebook", icon: Code },
-        { name: "VSCode", icon: Code },
-        { name: "Git/GitHub", icon: Code },
-        { name: "CI/CD", icon: Code },
-        { name: "Azure AI / Cloud", icon: Brain },
+        { name: "Python" },
+        { name: "SQL" },
+        { name: "C++" },
+        { name: "Jupyter Notebook" },
+        { name: "VSCode" },
+        { name: "Git/GitHub" },
+        { name: "CI/CD" },
+        { name: "Azure AI / Cloud" },
       ],
     },
     {
       title: "Data Analysis & Visualization",
       items: [
-        { name: "EDA", icon: BarChart3 },
-        { name: "Data Cleaning", icon: BarChart3 },
-        { name: "Data Wrangling", icon: BarChart3 },
-        { name: "Stats Analysis", icon: BarChart3 },
-        { name: "Dashboard Storytelling", icon: BarChart3 },
-        { name: "Power BI", icon: BarChart3 },
-        { name: "Tableau", icon: BarChart3 },
-        { name: "matplotlib", icon: BarChart3 },
-        { name: "seaborn", icon: BarChart3 },
+        { name: "EDA" },
+        { name: "Data Cleaning" },
+        { name: "Data Wrangling" },
+        { name: "Stats Analysis" },
+        { name: "Dashboard Storytelling" },
+        { name: "Power BI" },
+        { name: "Tableau" },
+        { name: "matplotlib" },
+        { name: "seaborn" },
       ],
     },
     {
       title: "Machine Learning",
       items: [
-        { name: "Supervised Learning", icon: Brain },
-        { name: "Unsupervised Learning", icon: Brain },
-        { name: "Predictive Modeling", icon: Brain },
-        { name: "Feature Engineering", icon: Brain },
-        { name: "Model Deployment", icon: Brain },
-        { name: "TensorFlow", icon: Brain },
-        { name: "scikit-learn", icon: Brain },
-        { name: "NumPy", icon: Brain },
-        { name: "Pandas", icon: Brain },
+        { name: "Supervised Learning" },
+        { name: "Unsupervised Learning" },
+        { name: "Predictive Modeling" },
+        { name: "Feature Engineering" },
+        { name: "Model Deployment" },
+        { name: "TensorFlow" },
+        { name: "scikit-learn" },
+        { name: "NumPy" },
+        { name: "Pandas" },
       ],
     },
     {
       title: "AI / NLP",
       items: [
-        { name: "NLP", icon: Brain },
-        { name: "Text Summarization", icon: Brain },
-        { name: "Sentiment Analysis", icon: Brain },
-        { name: "LLMs / OpenAI APIs", icon: Brain },
-        { name: "Computer Vision", icon: Brain },
+        { name: "NLP" },
+        { name: "Text Summarization" },
+        { name: "Sentiment Analysis" },
+        { name: "LLMs / OpenAI APIs" },
+        { name: "Computer Vision" },
       ],
     },
     {
       title: "Databases & ETL",
       items: [
-        { name: "MySQL", icon: Database },
-        { name: "DBMS", icon: Database },
-        { name: "ETL Pipelines", icon: Database },
-        { name: "Data Quality", icon: Database },
-        { name: "Excel", icon: Database },
+        { name: "MySQL" },
+        { name: "DBMS" },
+        { name: "ETL Pipelines" },
+        { name: "Data Quality" },
+        { name: "Excel" },
       ],
     },
     {
       title: "Soft Skills",
       items: [
-        { name: "Analytical Thinking", icon: Brain },
-        { name: "Problem Solving", icon: Brain },
-        { name: "Logical Thinking", icon: Brain },
-        { name: "Attention to Detail", icon: Users },
-        { name: "Teamwork", icon: Users },
-        { name: "Collaboration", icon: Users },
-        { name: "Presentation Skills", icon: Users },
-        { name: "Research Skills", icon: BookOpen },
-        { name: "Documentation & Reporting", icon: Users },
+        { name: "Analytical Thinking" },
+        { name: "Problem Solving" },
+        { name: "Logical Thinking" },
+        { name: "Attention to Detail" },
+        { name: "Teamwork" },
+        { name: "Collaboration" },
+        { name: "Presentation Skills" },
+        { name: "Research Skills" },
+        { name: "Documentation & Reporting" },
       ],
     },
   ];
-  
+
 
   const Card3D = ({ item, index, delay = 0, type = "skill" }) => {
     const [isFlipped, setIsFlipped] = useState(false);
     const [isHovered, setIsHovered] = useState(false);
+
+    const getCardColors = (i: number) => {
+      const blues = [
+        "from-cyan-500 to-blue-600"
+      ];
+      return blues[i % blues.length];
+    };
 
     const handleClick = (e: React.MouseEvent) => {
       e.stopPropagation();
@@ -194,21 +205,16 @@ const Skills = () => {
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         animate={{
-          opacity: isInView ? 1 : 0,
-          y: isInView ? 0 : 50,
-          rotateX: isHovered ? -8 : 0,
-          rotateY: isHovered ? 10 : 0,
+          opacity: 1,
+          y: 0,
           scale: isHovered ? 1.08 : 1,
           translateZ: isHovered ? 30 : 0,
         }}
         transition={{ duration: 0.25, ease: "easeOut" }}
-        className={`relative ${
-          type === "skill"
-            ? "h-36 md:h-34" // 🔥 taller on mobile now
-            : type === "certification"
-            ? "h-80 md:h-80"
-            : "h-80 md:h-80"
-        } perspective-1500 overflow-visible rounded-xl transition-all duration-300`}
+        className={`relative ${type === "skill"
+          ? "h-36 md:h-40"
+          : "h-80 md:h-80"
+          } perspective-1500 overflow-visible rounded-xl transition-all duration-300`}
         onClick={handleClick}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
@@ -220,27 +226,33 @@ const Skills = () => {
         }}
       >
         <motion.div
-          className={`relative w-full h-full preserve-3d ${
-            type === "skill" ? "cursor-default" : "cursor-pointer"
-          }`}
+          className={`relative w-full h-full preserve-3d ${type === "skill" ? "cursor-default" : "cursor-pointer"
+            }`}
           animate={{
             rotateY:
-              type !== "skill" && type !== "certification" && isFlipped ? 180 : 0,
+              type === "training" && isFlipped ? 180 : 0,
           }}
           transition={{ duration: 0.6 }}
           style={{ transformStyle: "preserve-3d" }}
         >
-          {/* Front */}
+          {/* --- FRONT --- */}
           <div className="absolute inset-0 w-full h-full backface-hidden">
-            <div className="glass-card p-5 md:p-6 rounded-xl h-full relative overflow-hidden transition-all duration-300 flex flex-col">
+            <div
+              className={`absolute inset-0 bg-gradient-to-br opacity-[0.10] pointer-events-none ${getCardColors(
+                index
+              )}`}
+            />
+            <div className="glass-card p-5 md:p-6 rounded-xl h-full relative overflow-hidden flex flex-col">
               <div className="flex items-center justify-between mb-3 md:mb-4">
                 <item.icon className="text-primary" size={28} />
               </div>
+
               <h3 className="text-base md:text-lg font-semibold mb-1 md:mb-2">
                 {item.name || item.title}
               </h3>
+
               {item.provider && (
-                <p className="text-sm text-muted-foreground mb-1 md:mb-2">
+                <p className="text-sm text-muted-foreground mb-1">
                   {item.provider}
                 </p>
               )}
@@ -250,6 +262,7 @@ const Skills = () => {
               {item.timeline && (
                 <p className="text-xs text-accent mb-1">{item.timeline}</p>
               )}
+
               {item.description && (
                 <p className="text-sm text-muted-foreground flex-1">
                   {item.description}
@@ -275,13 +288,19 @@ const Skills = () => {
             </div>
           </div>
 
-          {/* Back (Training Flip) */}
+          {/* --- BACK ONLY FOR TRAINING --- */}
           {type === "training" && (
             <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180">
-              <div className="glass-card p-6 rounded-xl h-full flex flex-col">
+              <div
+                className={`absolute inset-0 bg-gradient-to-br opacity-[0.10] ${getCardColors(
+                  index
+                )}`}
+              />
+              <div className="glass-card p-6 rounded-xl h-full flex flex-col relative">
                 <h3 className="text-lg font-bold mb-4 text-primary">
                   {item.title || item.name}
                 </h3>
+
                 <div className="space-y-3 flex-1">
                   <div>
                     <h4 className="font-semibold text-sm mb-1 text-accent">
@@ -294,6 +313,7 @@ const Skills = () => {
                     </p>
                   </div>
                 </div>
+
                 {(item.link || item.certificates) && (
                   <div className="mt-4 space-y-2">
                     {item.link && (
@@ -369,35 +389,63 @@ const Skills = () => {
               </TabsTrigger>
             </TabsList>
 
-            {/* ✅ Skills */}
-            <TabsContent value="skills" className="space-y-12">
-              {skillGroups
-                .filter((group) => group.items.length > 0)
-                .map((group, gIdx) => (
-                  <div key={group.title}>
-                    <motion.h3
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={isInView ? { opacity: 1, x: 0 } : {}}
-                      transition={{ duration: 0.6, delay: 0.2 + gIdx * 0.1 }}
-                      className="text-2xl font-bold mb-6 text-primary"
+            <TabsContent value="skills">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {skillGroups.map((group, gIdx) => {
+                  const iconMap: Record<string, any> = {
+                    "Programming & Tools": Code2,
+                    "Data Analysis & Visualization": BarChart3,
+                    "Machine Learning": Cpu,
+                    "AI / NLP": MessageSquareCode,
+                    "Databases & ETL": Database,
+                    "Soft Skills": UserCheck,
+                  };
+
+                  const Icon = iconMap[group.title] || Code2;
+
+                  return (
+                    <motion.div
+                      key={group.title}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={isInView ? { opacity: 1, y: 0 } : {}}
+                      transition={{ duration: 0.5, delay: 0.08 * gIdx }}
+                      className="glass-card skill-group p-6 md:p-7 rounded-2xl cursor-default space-y-5
+           transition-all duration-300 hover:scale-[1.05] hover:-translate-y-2
+           hover:shadow-[0_0_35px_rgba(0,200,255,0.45)]"
                     >
-                      {group.title}
-                    </motion.h3>
-                    {group.items.length > 0 && (
-                      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 md:gap-4">
-                        {group.items.map((skill, index) => (
-                          <Card3D
+                      <div
+                        className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-00 
+  opacity-[0.10] rounded-2xl pointer-events-none"
+                      />
+                      {/* Group Header */}
+                      <div className="flex items-center gap-3">
+                        <Icon className="text-primary" size={26} />
+                        <h3 className="text-lg md:text-xl font-bold tracking-wide text-primary">
+                          {group.title}
+                        </h3>
+                      </div>
+
+                      {/* Individual Skills */}
+                      <div className="grid grid-cols-1 gap-3 mt-2">
+                        {group.items.map((skill, sIdx) => (
+                          <motion.div
                             key={skill.name}
-                            item={{ ...skill, category: group.title }}
-                            index={index}
-                            delay={0.3 + gIdx * 0.1}
-                            type="skill"
-                          />
+                            initial={{ opacity: 0, x: 10 }}
+                            animate={isInView ? { opacity: 1, x: 0 } : {}}
+                            transition={{ duration: 0.25, delay: 0.03 * sIdx }}
+                            className="glass-card p-3 rounded-xl border border-white/10
+           text-sm md:text-base font-medium text-white/80 cursor-default
+           transition-all duration-300 hover:scale-[1.07] hover:text-primary 
+           hover:shadow-[0_0_25px_rgba(0,200,255,0.35)]"
+                          >
+                            {skill.name}
+                          </motion.div>
                         ))}
                       </div>
-                    )}
-                  </div>
-                ))}
+                    </motion.div>
+                  );
+                })}
+              </div>
             </TabsContent>
 
             {/* ✅ Certifications */}
@@ -446,8 +494,11 @@ const Skills = () => {
               return (
                 <div
                   key={stat.label}
-                  className="text-center glass-card p-6 rounded-xl hover-3d"
+                  className="text-center glass-card p-6 rounded-xl hover-3d relative overflow-hidden"
                 >
+                  {/* ✅ Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 opacity-[0.10] rounded-2xl pointer-events-none" />
+
                   <Icon className="mx-auto mb-4 text-primary" size={32} />
                   <motion.div
                     initial={{ scale: 0 }}
@@ -462,6 +513,7 @@ const Skills = () => {
               );
             })}
           </motion.div>
+
         </div>
 
         <style>{`

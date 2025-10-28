@@ -226,10 +226,25 @@
 
 @layer components {
   .glass-card {
-    background: linear-gradient(135deg, hsl(var(--glass-bg) / 0.1), hsl(var(--glass-bg) / 0.05));
-    backdrop-filter: blur(20px);
+    background: linear-gradient(
+      135deg,
+      hsl(var(--glass-bg) / 0.12),
+      hsl(var(--glass-bg) / 0.06)
+    );
+    backdrop-filter: blur(24px);
     border: 1px solid hsl(var(--glass-border));
-    box-shadow: var(--glass-shadow);
+    box-shadow: var(--shadow-card);
+    will-change: transform, box-shadow;
+    transition: all var(--animation-normal)
+      cubic-bezier(.22,1,.36,1);
+  }
+  
+  .glass-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    border-color: hsl(var(--glass-border) / 0.5);
+    background: inherit;
+    box-shadow: 0 0 45px hsl(var(--glow-primary) / 0.28),
+      var(--shadow-elevated);
   }
 
   .hover-3d {

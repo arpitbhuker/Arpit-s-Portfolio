@@ -6,7 +6,6 @@ const Testimonials = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  // Quotes pool
   const quotes = [
     {
       text: "Data is a precious thing and will last longer than the systems themselves.",
@@ -30,10 +29,9 @@ const Testimonials = () => {
     },
   ];
 
-  // Pick a random quote only once per refresh
   const randomQuote = useMemo(
     () => quotes[Math.floor(Math.random() * quotes.length)],
-    [] // ensures it only picks once per mount
+    []
   );
 
   return (
@@ -46,20 +44,30 @@ const Testimonials = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8 }}
-            className="glass-card p-8 rounded-xl text-center relative"
+            className="glass-card p-8 rounded-xl text-center relative overflow-hidden"
           >
-            <Quote className="absolute top-4 left-4 text-primary/30" size={32} />
-            <Quote
-              className="absolute bottom-4 right-4 text-primary/30 rotate-180"
-              size={32}
-            />
+            {/* ✅ New Darker Gradient Glow */}
+            <div className="absolute inset-0 bg-gradient-to-br from-cyan-700 to-blue-800 opacity-[0.14] blur-xl pointer-events-none z-0"></div>
 
-            <blockquote className="text-lg italic text-muted-foreground mb-4 leading-relaxed">
-              "{randomQuote.text}"
-            </blockquote>
-            <cite className="text-primary font-medium">
-              — {randomQuote.author}
-            </cite>
+            {/* Content (elevated above glow) */}
+            {/* Content */}
+            <div className="relative z-10">
+              <blockquote className="text-lg italic text-muted-foreground mb-4 leading-relaxed relative px-8">
+                <Quote
+                  className="absolute -top-2 -left-2 text-primary/40"
+                  size={24}
+                />
+                "{randomQuote.text}"
+                <Quote
+                  className="absolute -bottom-2 -right-2 text-primary/40 rotate-180"
+                  size={24}
+                />
+              </blockquote>
+
+              <cite className="text-primary font-medium">
+                — {randomQuote.author}
+              </cite>
+            </div>
           </motion.div>
         </div>
       </div>

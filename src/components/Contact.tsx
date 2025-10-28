@@ -61,8 +61,9 @@ const Contact = () => {
                       initial={{ opacity: 0, y: 20 }}
                       animate={isInView ? { opacity: 1, y: 0 } : {}}
                       transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                      className="glass-card p-4 rounded-lg text-left hover-3d transition-all duration-300"
+                      className="glass-card p-4 rounded-lg text-left hover-3d transition-all duration-300 relative overflow-hidden"
                     >
+                      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 opacity-[0.10] rounded-lg pointer-events-none" />
                       <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${category.gradient} flex items-center justify-center mb-3`}>
                         <Icon className="text-white" size={24} />
                       </div>
@@ -75,7 +76,8 @@ const Contact = () => {
             </div>
 
             {/* Availability Status */}
-            <div className="glass-card p-6 rounded-xl">
+            <div className="glass-card p-6 rounded-xl relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 opacity-[0.10] rounded-xl pointer-events-none" />
               <div className="flex items-center space-x-3 mb-3">
                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
                 <h3 className="text-lg font-semibold text-green-400">Available for Opportunities</h3>
@@ -87,7 +89,8 @@ const Contact = () => {
           {/* Right Column: Contact Info + Quick Links (lower) */}
           <div className="space-y-8 mt-12 lg:mt-4">
             {/* Contact Info */}
-            <div className="glass-card p-6 rounded-xl">
+            <div className="glass-card p-6 rounded-xl relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 opacity-[0.10] rounded-xl pointer-events-none" />
               <h3 className="text-xl font-bold mb-4 text-primary">Contact Information</h3>
               <div className="space-y-4">
                 <div className="flex items-center space-x-3"><Mail className="text-primary" size={20} /><div><p className="font-medium">Email</p><p className="text-sm text-muted-foreground">arpitkumarbhuker@gmail.com</p></div></div>

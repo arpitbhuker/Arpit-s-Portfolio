@@ -15,20 +15,19 @@ const EducationCard = ({ item, index }) => {
       initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
       animate={isInView ? { opacity: 1, x: 0 } : {}}
       transition={{ duration: 1.2, ease: "easeOut" }}
-      className={`relative flex flex-col md:flex-row items-center ${
-        index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-      }`}
+      className={`relative flex flex-col md:flex-row items-center ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+        }`}
     >
       <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 bg-primary rounded-full border-4 border-background flex items-center justify-center z-10">
         <Icon size={16} className="text-primary-foreground" />
       </div>
 
       <div
-        className={`ml-0 sm:ml-4 md:ml-0 ${
-          index % 2 === 0 ? "md:mr-8" : "md:ml-8"
-        } md:w-5/12 w-full`}
+        className={`ml-0 sm:ml-4 md:ml-0 ${index % 2 === 0 ? "md:mr-8" : "md:ml-8"
+          } md:w-5/12 w-full`}
       >
-        <div className="glass-card p-6 rounded-xl hover-3d w-full">
+        <div className="glass-card p-6 rounded-xl hover-3d w-full relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 opacity-[0.10] rounded-2xl pointer-events-none" />
           <div className="flex items-center justify-between mb-2 flex-wrap gap-2">
             <span className="text-primary font-semibold flex items-center">
               <Calendar size={16} className="mr-2" />
@@ -105,7 +104,7 @@ const About = () => {
             className="relative w-full flex justify-center"
           >
             <div className="relative w-80 sm:w-96 md:w-[28rem] h-80 sm:h-96 md:h-[28rem] flex items-center justify-center">
-              
+
               {/* Circle shadow/frame */}
               <div
                 className="rounded-full absolute w-full h-full"
@@ -183,8 +182,9 @@ const About = () => {
                     initial={{ opacity: 0, x: -20 }}
                     animate={isInView ? { opacity: 1, x: 0 } : {}}
                     transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                    className="flex items-center space-x-2 glass-card p-3 rounded-lg hover-3d w-full"
+                    className="flex items-center space-x-2 glass-card p-3 rounded-lg hover-3d w-full relative overflow-hidden"
                   >
+                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 opacity-[0.10] rounded-2xl pointer-events-none" />
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
                     <span className="text-foreground font-medium">{skill}</span>
                   </motion.div>
