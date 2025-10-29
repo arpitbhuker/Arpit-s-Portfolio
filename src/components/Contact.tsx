@@ -62,20 +62,25 @@ const Contact = () => {
                       animate={isInView ? { opacity: 1, y: 0 } : {}}
                       transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                       className="
-  group relative overflow-hidden
-  rounded-xl backdrop-blur-xl
-  bg-[#0A2A43]/40
-  border border-[#00E5FF]/20
-  shadow-[0_4px_18px_rgba(0,229,255,0.08)]
-  transition-all duration-300 ease-out
-  hover:scale-90 hover:shadow-[0_8px_24px_rgba(0,229,255,0.22)]
-">
-<div
-  className="
-    absolute inset-0 rounded-xl pointer-events-none
-    bg-gradient-to-br from-[#00E5FF]/10 to-[#007EFF]/10
-    opacity-0 group-hover:opacity-40
-    transition-opacity duration-500 ease-out z-0"/>
+                      glass-card p-6 rounded-xl relative overflow-hidden
+                      group
+                      backdrop-blur-xl
+                      bg-[#0A2A43]/40
+                      border border-[#00E5FF]/20
+                      shadow-[0_4px_18px_rgba(0,229,255,0.08)]
+                      transition-all duration-300 ease-out
+                      hover:scale-90 hover:shadow-[0_12px_36px_rgba(0,229,255,0.25)]
+                    "
+                  >
+                    <div
+                      className="
+                        absolute inset-0 rounded-xl pointer-events-none
+                        bg-gradient-to-br from-[#00E5FF]/10 to-[#007EFF]/10
+                        opacity-0 group-hover:opacity-40
+                        transition-opacity duration-500 ease-out
+                        z-0
+                      "
+                    />
 
 
                       <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 opacity-[0.10] rounded-lg pointer-events-none" />
@@ -92,20 +97,25 @@ const Contact = () => {
 
             {/* Availability Status */}
             <div className="
-  group relative overflow-hidden
-  rounded-xl backdrop-blur-xl
-  bg-[#0A2A43]/40
-  border border-[#00E5FF]/20
-  shadow-[0_4px_18px_rgba(0,229,255,0.08)]
-  transition-all duration-300 ease-out
-  hover:scale-90 hover:shadow-[0_8px_24px_rgba(0,229,255,0.22)]
-">
-<div
-  className="
-    absolute inset-0 rounded-xl pointer-events-none
-    bg-gradient-to-br from-[#00E5FF]/10 to-[#007EFF]/10
-    opacity-0 group-hover:opacity-40
-    transition-opacity duration-500 ease-out z-0"/>
+    glass-card p-6 rounded-xl relative overflow-hidden
+    group
+    backdrop-blur-xl
+    bg-[#0A2A43]/40
+    border border-[#00E5FF]/20
+    shadow-[0_4px_18px_rgba(0,229,255,0.08)]
+    transition-all duration-300 ease-out
+    hover:scale-90 hover:shadow-[0_12px_36px_rgba(0,229,255,0.25)]
+  "
+>
+  <div
+    className="
+      absolute inset-0 rounded-xl pointer-events-none
+      bg-gradient-to-br from-[#00E5FF]/10 to-[#007EFF]/10
+      opacity-0 group-hover:opacity-40
+      transition-opacity duration-500 ease-out
+      z-0
+    "
+  />
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 opacity-[0.10] rounded-xl pointer-events-none" />
               <div className="flex items-center space-x-3 mb-3">
                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
@@ -119,20 +129,25 @@ const Contact = () => {
           <div className="space-y-8 mt-12 lg:mt-4">
             {/* Contact Info */}
             <div className="
-  group relative overflow-hidden
-  rounded-xl backdrop-blur-xl
-  bg-[#0A2A43]/40
-  border border-[#00E5FF]/20
-  shadow-[0_4px_18px_rgba(0,229,255,0.08)]
-  transition-all duration-300 ease-out
-  hover:scale-90 hover:shadow-[0_8px_24px_rgba(0,229,255,0.22)]
-">
-<div
-  className="
-    absolute inset-0 rounded-xl pointer-events-none
-    bg-gradient-to-br from-[#00E5FF]/10 to-[#007EFF]/10
-    opacity-0 group-hover:opacity-40
-    transition-opacity duration-500 ease-out z-0"/>
+    glass-card p-6 rounded-xl relative overflow-hidden
+    group
+    backdrop-blur-xl
+    bg-[#0A2A43]/40
+    border border-[#00E5FF]/20
+    shadow-[0_4px_18px_rgba(0,229,255,0.08)]
+    transition-all duration-300 ease-out
+    hover:scale-90 hover:shadow-[0_12px_36px_rgba(0,229,255,0.25)]
+  "
+>
+  <div
+    className="
+      absolute inset-0 rounded-xl pointer-events-none
+      bg-gradient-to-br from-[#00E5FF]/10 to-[#007EFF]/10
+      opacity-0 group-hover:opacity-40
+      transition-opacity duration-500 ease-out
+      z-0
+    "
+  />
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 opacity-[0.10] rounded-xl pointer-events-none" />
               <h3 className="text-xl font-bold mb-4 text-primary">Contact Information</h3>
               <div className="space-y-4">
@@ -153,7 +168,7 @@ const Contact = () => {
                     href={method.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    whileHover={{ scale: 1.15 }}
+                    whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className={`flex items-center justify-center gap-2 p-4 rounded-xl font-semibold text-white bg-gradient-to-br ${method.gradient} shadow-lg hover:shadow-2xl transition-all duration-300`}
                   >
