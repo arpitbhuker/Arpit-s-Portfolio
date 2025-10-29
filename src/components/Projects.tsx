@@ -8,12 +8,14 @@ import {
   Trophy,
   PieChart,
   TrendingUp,
+  Github,
   Eye,
   Database,
   Grid2x2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Card } from "@/components/ui/card";
 import gestureImg from "@/assets/gesture.png";
 import netflixImg from "@/assets/netflix.png";
 import evImg from "@/assets/ev.png";
@@ -161,6 +163,9 @@ const Projects = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Featured <span className="gradient-text">Projects</span>
           </h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+    Real-world applications showcasing data science, AI/ML, and analytics expertise
+  </p>
         </motion.div>
 
         {/* Filters */}
@@ -206,8 +211,8 @@ const Projects = () => {
     border border-[#00E5FF]/20
     shadow-[0_4px_18px_rgba(0,229,255,0.08)]
     transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]
-    hover:scale-[1.05]
-    hover:shadow-[0_10px_30px_rgba(0,229,255,0.18)]
+    hover:scale-[1.10]
+    hover:shadow-[0_12px_36px_rgba(0,229,255,0.25)]
   "
               >
                 {/* ✅ Hover Gradient Overlay — EXACT effect requested */}
@@ -281,6 +286,50 @@ const Projects = () => {
               </motion.div>
             );
           })}
+        </div>
+
+        {/* ✅ Collaboration CTA — Added Here */}
+        <div className="mt-24 mb-16 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <Card className="p-10 bg-gradient-to-br from-gray-900/60 via-gray-900/40 to-gray-900/60 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl">
+              <div className="space-y-6">
+                <h3 className="text-3xl font-bold">
+                  Let’s <span className="gradient-text">Collaborate</span> 🚀
+                </h3>
+
+                <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                  I love building intelligent systems that turn data into decisions.
+                  If your idea involves AI, ML, analytics, or automation — we’re already aligned.
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+                  <a href="/contact">
+                    <Button
+                      size="lg"
+                      className="bg-gradient-primary hover:scale-105 transition-transform duration-300"
+                    >
+                      Get in Touch
+                    </Button>
+                  </a>
+
+                  <a href="https://github.com/arpitbhuker" target="_blank" rel="noopener noreferrer">
+                    <Button
+                      variant="outline"
+                      size="lg"
+                      className="hover:scale-105 transition-transform duration-300 border-white/20"
+                    >
+                      <Github className="w-4 h-4 mr-2" />
+                      View GitHub
+                    </Button>
+                  </a>
+                </div>
+              </div>
+            </Card>
+          </motion.div>
         </div>
       </div>
     </section>
