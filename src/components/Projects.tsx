@@ -192,28 +192,42 @@ const Projects = () => {
             return (
               <motion.div
                 key={project.id}
-                initial={{ opacity: 0, y: 60 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0, y: 60, scale: 0.98 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.07,
+                  ease: "easeOut",
+                }}
                 whileHover={{
-                  scale: 1.05,
+                  scale: 1.04,
+                  transition: { duration: 0.25, ease: "easeOut" },
                 }}
                 className="
-    group relative rounded-2xl overflow-hidden transition-all 
-    border border-white/10 bg-white/5 backdrop-blur-md
-    hover:bg-white/[0.08]
-    hover:border-transparent
-    before:absolute before:inset-0 before:rounded-2xl before:p-[2px]
-    before:bg-gradient-to-r before:from-blue-400 before:to-cyan-400
-    before:opacity-0 hover:before:opacity-100 before:transition-opacity
-    before:z-[-1] 
+    group relative rounded-2xl overflow-hidden
+    bg-white/5 backdrop-blur-lg border border-white/10
+    shadow-[0_0_20px_rgba(0,255,255,0.05)]
+    hover:shadow-[0_0_45px_rgba(0,255,255,0.25)]
+    transition-all
   "
               >
+                {/* Glow Animation Border */}
+                <div
+                  className="
+      pointer-events-none absolute inset-0 rounded-2xl
+      bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-500
+      opacity-0 group-hover:opacity-70
+      blur-xl transition-opacity duration-500 ease-out
+      animate-[pulseGlow_3s_infinite]
+      -z-10
+    "
+                />
+
                 {/* Banner */}
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="h-44 w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="h-44 w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                 />
 
                 <div className="p-6 space-y-4">
@@ -237,14 +251,12 @@ const Projects = () => {
                     {project.summary}
                   </p>
 
-                  {/* Achievements */}
                   <ul className="text-sm list-disc list-inside text-muted-foreground space-y-1">
                     {project.achievements.map((a, i) => (
                       <li key={i}>{a}</li>
                     ))}
                   </ul>
 
-                  {/* Tech badges */}
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((t, i) => (
                       <Badge key={i} variant="outline" className="text-xs">
