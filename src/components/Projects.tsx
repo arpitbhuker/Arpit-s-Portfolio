@@ -199,39 +199,41 @@ const Projects = () => {
                   delay: index * 0.06,
                   ease: "easeOut",
                 }}
-                whileHover={{
-                  scale: 1.04,
-                  transition: { duration: 0.25, ease: "easeOut" },
-                }}
                 className="
-                group relative rounded-2xl overflow-hidden
-                bg-white/5 backdrop-blur-xl
-                border border-white/10
-                shadow-[0_0_25px_rgba(0,255,255,0.05)]
-                transition-all
-              "
+    group relative rounded-xl overflow-hidden
+    flex flex-col justify-between
+    bg-[#0A2A43]/60 backdrop-blur-xl
+    border border-[#00E5FF]/20
+    shadow-[0_4px_18px_rgba(0,229,255,0.08)]
+    transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]
+    hover:scale-[1.05]
+    hover:shadow-[0_10px_30px_rgba(0,229,255,0.18)]
+  "
               >
-                {/* ✅ Internal Glow Aura — NO SEAMS */}
+                {/* ✅ Hover Gradient Overlay — EXACT effect requested */}
                 <div
                   className="
-                  absolute inset-0 rounded-2xl pointer-events-none
-                  bg-gradient-to-br from-blue-500/40 via-cyan-400/40 to-blue-500/40
-                  opacity-0 group-hover:opacity-100
-                  blur-[32px] transition-all duration-500 ease-out
-                  z-0
-                "
+      absolute inset-0 rounded-xl pointer-events-none
+      bg-gradient-to-br from-[#00E5FF]/10 to-[#007EFF]/10
+      opacity-0 group-hover:opacity-40
+      transition-opacity duration-500 ease-out
+      z-0
+    "
                 />
 
-                {/* ✅ Card Content */}
-                <div className="relative z-10">
+                {/* ✅ Card Content (Preserved) */}
+                <div className="relative z-10 flex flex-col h-full">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="h-44 w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                    className="
+        h-44 w-full object-cover
+        group-hover:scale-105
+        transition-transform duration-500 ease-out
+      "
                   />
 
                   <div className="p-6 space-y-4">
-                    {/* Category + Timeline */}
                     <div className="flex justify-between items-center">
                       <Badge
                         variant="secondary"
@@ -246,7 +248,7 @@ const Projects = () => {
                       </div>
                     </div>
 
-                    <h3 className="text-xl font-bold group-hover:text-primary transition-colors">
+                    <h3 className="text-xl font-bold group-hover:text-[#00E5FF] transition-colors">
                       {project.title}
                     </h3>
 
@@ -254,7 +256,7 @@ const Projects = () => {
                       {project.summary}
                     </p>
 
-                    <ul className="text-sm text-muted-foreground space-y-1 list-disc list-inside">
+                    <ul className="text-sm list-disc list-inside text-muted-foreground space-y-1">
                       {project.achievements.map((a, i) => (
                         <li key={i}>{a}</li>
                       ))}
