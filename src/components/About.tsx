@@ -26,8 +26,20 @@ const EducationCard = ({ item, index }) => {
         className={`ml-0 sm:ml-4 md:ml-0 ${index % 2 === 0 ? "md:mr-8" : "md:ml-8"
           } md:w-5/12 w-full`}
       >
-        <div className="glass-card p-6 rounded-xl hover-3d w-full relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 opacity-[0.10] rounded-2xl pointer-events-none" />
+        <div className="rounded-xl p-6 w-full relative overflow-hidden group
+     bg-[#0A2A43]/60 backdrop-blur-xl
+     border border-[#00E5FF]/20
+     shadow-[0_0_25px_rgba(0,229,255,0.08)]
+     transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]
+     hover:scale-[1.05]
+     hover:border-[#00E5FF]/40 hover:shadow-[0_0_35px_rgba(0,229,255,0.15)]"
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-[#00E5FF]/10 to-[#007EFF]/10
+     rounded-xl pointer-events-none
+     opacity-0 group-hover:opacity-40
+     transition-opacity duration-500
+     -z-10"
+          />
           <div className="flex items-center justify-between mb-2 flex-wrap gap-2">
             <span className="text-primary font-semibold flex items-center">
               <Calendar size={16} className="mr-2" />
@@ -182,9 +194,22 @@ const About = () => {
                     initial={{ opacity: 0, x: -20 }}
                     animate={isInView ? { opacity: 1, x: 0 } : {}}
                     transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                    className="flex items-center space-x-2 glass-card p-3 rounded-lg hover-3d w-full relative overflow-hidden"
+                    className="flex items-center space-x-2 w-full relative overflow-hidden group
+    bg-[#0A2A43]/60 backdrop-blur-xl
+    border border-[#00E5FF]/20
+    shadow-[0_0_20px_rgba(0,229,255,0.05)]
+    p-3 rounded-lg transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]
+    hover:scale-[1.05]
+    hover:border-[#00E5FF]/40 hover:shadow-[0_0_30px_rgba(0,229,255,0.15)]"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 opacity-[0.10] rounded-2xl pointer-events-none" />
+                    {/* Gradient Glow */}
+                    <div className="absolute inset-0 
+      bg-gradient-to-br from-[#00E5FF]/10 to-[#007EFF]/10
+      rounded-lg pointer-events-none
+      opacity-0 group-hover:opacity-40 
+      transition-opacity duration-500
+      -z-10"
+                    />
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
                     <span className="text-foreground font-medium">{skill}</span>
                   </motion.div>
