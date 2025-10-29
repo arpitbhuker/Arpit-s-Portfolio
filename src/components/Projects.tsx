@@ -200,24 +200,26 @@ const Projects = () => {
                   ease: "easeOut",
                 }}
                 whileHover={{
-                  scale: 1.04,
+                  scale: 1.035,
                   transition: { duration: 0.25, ease: "easeOut" },
                 }}
                 className="
-    group relative rounded-2xl overflow-hidden transition-all
-    bg-white/5 backdrop-blur-lg border border-white/10
-    shadow-[0_0_18px_rgba(0,255,255,0.05)]
-  "
+                group relative rounded-2xl overflow-hidden
+                bg-white/5 backdrop-blur-xl
+                border border-white/10
+                shadow-[0_0_18px_rgba(0,255,255,0.05)]
+                transition-all
+              "
               >
-                {/* External Aura Glow Layer */}
+                {/* 🔥 External Neon Aura + Smooth Fade */}
                 <div
                   className="
-      pointer-events-none absolute -inset-2 rounded-3xl
-      bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-500
-      opacity-0 group-hover:opacity-100
-      blur-2xl transition-opacity duration-500 ease-out
-      -z-10
-    "
+                  pointer-events-none absolute -inset-2 rounded-3xl
+                  bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-500
+                  opacity-0 group-hover:opacity-100
+                  blur-[30px] transition-all duration-600 ease-out
+                  -z-10
+                "
                 />
 
                 {/* CARD CONTENT BELOW — UNCHANGED */}
