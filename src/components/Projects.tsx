@@ -16,6 +16,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 import gestureImg from "@/assets/gesture.png";
 import netflixImg from "@/assets/netflix.png";
 import evImg from "@/assets/ev.png";
@@ -164,8 +165,9 @@ const Projects = () => {
             Featured <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-    Real-world applications showcasing data science, AI/ML, and analytics expertise
-  </p>
+            Real-world applications showcasing data science, AI/ML, and
+            analytics expertise
+          </p>
         </motion.div>
 
         {/* Filters */}
@@ -211,7 +213,7 @@ const Projects = () => {
     border border-[#00E5FF]/20
     shadow-[0_4px_18px_rgba(0,229,255,0.08)]
     transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]
-    hover:scale-[1.18]
+    hover:scale-[1.28]
     hover:shadow-[0_12px_36px_rgba(0,229,255,0.25)]
   "
               >
@@ -232,12 +234,10 @@ const Projects = () => {
                     src={project.image}
                     alt={project.title}
                     className="
-        h-44 w-full object-cover
-        group-hover:scale-105
-        transition-transform duration-500 ease-out
-      "
+      h-44 w-full object-cover
+      transition-transform duration-500 ease-out
+    "
                   />
-
                   <div className="p-6 space-y-4">
                     <div className="flex justify-between items-center">
                       <Badge
@@ -295,43 +295,49 @@ const Projects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <Card className="p-10 rounded-3xl 
+            <Card
+              className="p-10 rounded-3xl 
     bg-gradient-to-br from-cyan-500/10 to-blue-600/10
     border border-cyan-400/20 backdrop-blur-xl
     shadow-[0_0_20px_rgba(0,255,255,0.2)]
     hover:shadow-[0_0_35px_rgba(0,255,255,0.35)]
     transition-all duration-500
-    max-w-4xl mx-auto">
+    max-w-4xl mx-auto"
+            >
               <div className="space-y-6">
                 <h3 className="text-3xl font-bold">
                   Let’s <span className="gradient-text">Collaborate</span> 🚀
                 </h3>
 
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-                  I love building intelligent systems that turn data into decisions.
-                  If your idea involves AI, ML, analytics, or automation — we’re already aligned.
+                  I love building intelligent systems that turn data into
+                  decisions. If your idea involves AI, ML, analytics, or
+                  automation — we’re already aligned.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-                  <a href="Contact">
+                  <Link to="/contact">
                     <Button
                       size="lg"
                       className="bg-gradient-to-r from-cyan-400 to-blue-500
-                      text-black font-semibold
-                      hover:scale-110 hover:shadow-[0_0_20px_rgba(0,255,255,0.5)]
-                      transition-all duration-300"
+    text-black font-semibold
+    hover:scale-110 hover:shadow-[0_0_20px_rgba(0,255,255,0.5)]
+    transition-all duration-300"
                     >
                       Get in Touch
                     </Button>
-                  </a>
-
-                  <a href="https://github.com/arpitbhuker" target="_blank" rel="noopener noreferrer">
+                  </Link>
+                  <a
+                    href="https://github.com/arpitbhuker"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Button
                       variant="outline"
                       size="lg"
                       className="border-cyan-400 text-cyan-300
                       hover:bg-cyan-400 hover:text-black
-                      hover:shadow-[0_0_25px_rgba(0,255,255,0.5)]
+                      hover:scale-90 hover:shadow-[0_0_25px_rgba(0,255,255,0.5)]
                       transition-all duration-300"
                     >
                       <Github className="w-4 h-4 mr-2" />
