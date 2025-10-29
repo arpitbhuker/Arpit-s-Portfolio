@@ -61,8 +61,19 @@ const Contact = () => {
                       initial={{ opacity: 0, y: 20 }}
                       animate={isInView ? { opacity: 1, y: 0 } : {}}
                       transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-                      className="glass-card p-4 rounded-lg text-left hover-3d transition-all duration-300 relative overflow-hidden"
-                    >
+                      className=" group relative overflow-hidden
+  rounded-xl backdrop-blur-xl
+  bg-[#0A2A43]/40
+  border border-[#00E5FF]/20
+  shadow-[0_4px_18px_rgba(0,229,255,0.08)]
+  transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]
+  hover:scale-80 hover:shadow-[0_12px_36px_rgba(0,229,255,0.25)] ">
+<div
+  className="absolute inset-0 rounded-xl pointer-events-none
+    bg-gradient-to-br from-[#00E5FF]/10 to-[#007EFF]/10
+    opacity-0 group-hover:opacity-40
+    transition-opacity duration-500 ease-out z-0" />
+
                       <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 opacity-[0.10] rounded-lg pointer-events-none" />
                       <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${category.gradient} flex items-center justify-center mb-3`}>
                         <Icon className="text-white" size={24} />
@@ -76,7 +87,18 @@ const Contact = () => {
             </div>
 
             {/* Availability Status */}
-            <div className="glass-card p-6 rounded-xl relative overflow-hidden">
+            <div className=" group relative overflow-hidden
+  rounded-xl backdrop-blur-xl
+  bg-[#0A2A43]/40
+  border border-[#00E5FF]/20
+  shadow-[0_4px_18px_rgba(0,229,255,0.08)]
+  transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]
+  hover:scale-80 hover:shadow-[0_12px_36px_rgba(0,229,255,0.25)] ">
+<div
+  className="absolute inset-0 rounded-xl pointer-events-none
+    bg-gradient-to-br from-[#00E5FF]/10 to-[#007EFF]/10
+    opacity-0 group-hover:opacity-40
+    transition-opacity duration-500 ease-out z-0" />
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 opacity-[0.10] rounded-xl pointer-events-none" />
               <div className="flex items-center space-x-3 mb-3">
                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
@@ -89,7 +111,18 @@ const Contact = () => {
           {/* Right Column: Contact Info + Quick Links (lower) */}
           <div className="space-y-8 mt-12 lg:mt-4">
             {/* Contact Info */}
-            <div className="glass-card p-6 rounded-xl relative overflow-hidden">
+            <div className=" group relative overflow-hidden
+  rounded-xl backdrop-blur-xl
+  bg-[#0A2A43]/40
+  border border-[#00E5FF]/20
+  shadow-[0_4px_18px_rgba(0,229,255,0.08)]
+  transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]
+  hover:scale-80 hover:shadow-[0_12px_36px_rgba(0,229,255,0.25)] ">
+<div
+  className="absolute inset-0 rounded-xl pointer-events-none
+    bg-gradient-to-br from-[#00E5FF]/10 to-[#007EFF]/10
+    opacity-0 group-hover:opacity-40
+    transition-opacity duration-500 ease-out z-0" />
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-blue-600 opacity-[0.10] rounded-xl pointer-events-none" />
               <h3 className="text-xl font-bold mb-4 text-primary">Contact Information</h3>
               <div className="space-y-4">
@@ -110,7 +143,7 @@ const Contact = () => {
                     href={method.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    whileHover={{ scale: 1.05 }}
+                    whileHover={{ scale: 1.15 }}
                     whileTap={{ scale: 0.95 }}
                     className={`flex items-center justify-center gap-2 p-4 rounded-xl font-semibold text-white bg-gradient-to-br ${method.gradient} shadow-lg hover:shadow-2xl transition-all duration-300`}
                   >

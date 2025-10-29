@@ -54,20 +54,20 @@ const Testimonials = () => {
   shadow-[0_4px_18px_rgba(0,229,255,0.08)]
   transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]
   hover:scale-105 hover:shadow-[0_12px_36px_rgba(0,229,255,0.25)]
-"
-          >
-            <div
-              className="
+">
+  <div
+  className="
     absolute inset-0 rounded-xl pointer-events-none
     bg-gradient-to-br from-[#00E5FF]/10 to-[#007EFF]/10
     opacity-0 group-hover:opacity-40
     transition-opacity duration-500 ease-out
     z-0
   "
-            />
+/>
+
 
             {/* ✅ New Darker Gradient Glow */}
-            <div className="absolute inset-0 rounded-xl bg-white/5 backdrop-blur-3xl mix-blend-overlay pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-br from-cyan-700 to-blue-800 opacity-[0.14] blur-xl pointer-events-none z-0"></div>
 
             {/* Content (elevated above glow) */}
             {/* Content */}
