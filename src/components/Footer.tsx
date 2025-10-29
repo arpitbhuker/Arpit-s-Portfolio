@@ -34,7 +34,7 @@ const Footer = () => {
             <h3 className="text-2xl font-bold mb-4">
               <span className="gradient-text">Arpit</span>
             </h3>
-            <p className="text-muted-foreground mb-6 leading-relaxed">
+            <p className="text-white mb-6 leading-relaxed">
               Always eager to collaborate on cutting-edge projects and innovative data-driven solutions.
             </p>
             <div className="flex space-x-4">
@@ -78,7 +78,7 @@ const Footer = () => {
                 <button
                   key={link.name}
                   onClick={() => scrollToSection(link.href)}
-                  className="block text-muted-foreground hover:text-primary transition-colors duration-300"
+                  className="block text-white hover:text-primary transition-colors duration-300"
                 >
                   {link.name}
                 </button>
@@ -95,11 +95,11 @@ const Footer = () => {
           >
             <h4 className="text-lg font-semibold mb-6 text-primary">Get In Touch</h4>
             <div className="space-y-3">
-              <div className="flex items-center space-x-3 text-muted-foreground">
+              <div className="flex items-center space-x-3 text-white">
                 <Mail size={16} className="text-primary" />
                 <span className="text-sm">arpitkumarbhuker@gmail.com</span>
               </div>
-              <div className="flex items-center space-x-3 text-muted-foreground">
+              <div className="flex items-center space-x-3 text-white">
                 <Phone size={16} className="text-primary" />
                 <span className="text-sm">+91 8168759378</span>
               </div>
@@ -110,7 +110,7 @@ const Footer = () => {
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                 <span className="text-sm font-medium text-green-400">Available for Opportunities</span>
               </div>
-              <p className="text-xs text-muted-foreground">
+              <p className="text-xs text-white">
                 Open to internships and full-time roles in AI/ML & Data Science
               </p>
             </div>

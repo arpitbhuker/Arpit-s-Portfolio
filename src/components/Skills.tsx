@@ -17,12 +17,7 @@ import {
   Calendar,
   BookOpen,
 } from "lucide-react";
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger,
-} from "@/components/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
@@ -90,7 +85,13 @@ const Skills = () => {
     },
   ];
 
-  const categories = ["All", "AI/ML", "Cloud & AI", "Database", "Data Analytics"];
+  const categories = [
+    "All",
+    "AI/ML",
+    "Cloud & AI",
+    "Database",
+    "Data Analytics",
+  ];
   const filteredCerts = useMemo(() => {
     if (selectedCategory === "All") return certifications;
     return certifications.filter((c) => c.category === selectedCategory);
@@ -110,16 +111,16 @@ const Skills = () => {
         "Large Language Models (LLMs)",
         "AI Strategy",
         "Prompt Engineering",
-        "Deep Learning Concepts"
+        "Deep Learning Concepts",
       ],
       skillsLabel: "Skills Gained",
       category: "Course/Mastermind",
       certificates: [
         {
           label: "Certificate",
-          url: "https://drive.google.com/file/d/1aoGiKgCAHrZVoIJCAZk5YwwEadaxBiGu/view?usp=sharing"
-        }
-      ]
+          url: "https://drive.google.com/file/d/1aoGiKgCAHrZVoIJCAZk5YwwEadaxBiGu/view?usp=sharing",
+        },
+      ],
     },
     {
       type: "Workshop",
@@ -133,16 +134,16 @@ const Skills = () => {
         "Data Structures",
         "Algorithms",
         "Problem Solving",
-        "Competitive Programming Basics"
+        "Competitive Programming Basics",
       ],
       skillsLabel: "Skills Gained",
       category: "Workshop",
       certificates: [
         {
           label: "Certificate",
-          url: "https://drive.google.com/file/d/1tFVyZrIg-GibPOTGuYGmfUcNeY284SJF/view?usp=sharing"
-        }
-      ]
+          url: "https://drive.google.com/file/d/1tFVyZrIg-GibPOTGuYGmfUcNeY284SJF/view?usp=sharing",
+        },
+      ],
     },
     {
       type: "Training",
@@ -160,20 +161,20 @@ const Skills = () => {
         "XGBoost",
         "EDA",
         "Imbalanced Learning",
-        "Python"
+        "Python",
       ],
       skillsLabel: "Skills Gained",
       category: "Training",
       certificates: [
         {
           label: "Internship Certificate",
-          url: "https://drive.google.com/file/d/1LPQbkCsNrrLEkH6VPVDpKbkFjXZeMHEd/view?usp=drive_link"
+          url: "https://drive.google.com/file/d/1LPQbkCsNrrLEkH6VPVDpKbkFjXZeMHEd/view?usp=drive_link",
         },
         {
           label: "Program Completion",
-          url: "https://drive.google.com/file/d/1TCDZfZ3GWsXosVafmyVmaPSJOYmLl3z7/view?usp=drive_link"
-        }
-      ]
+          url: "https://drive.google.com/file/d/1TCDZfZ3GWsXosVafmyVmaPSJOYmLl3z7/view?usp=drive_link",
+        },
+      ],
     },
     {
       type: "Workshop",
@@ -187,24 +188,26 @@ const Skills = () => {
         "Microsoft Office Suite",
         "AI Productivity Tools",
         "Workflow Automation",
-        "AI Integration"
+        "AI Integration",
       ],
       skillsLabel: "Skills Gained",
       category: "Workshop",
       certificates: [
         {
           label: "Certificate",
-          url: "https://drive.google.com/file/d/1E8-NnhymP49FP9YGK0Zvc9LCrAZlM315/view?usp=sharing"
-        }
-      ]
-    }
+          url: "https://drive.google.com/file/d/1E8-NnhymP49FP9YGK0Zvc9LCrAZlM315/view?usp=sharing",
+        },
+      ],
+    },
   ];
 
   const trainingFilters = ["All", "Training", "Workshop"];
 
   const filteredTraining = useMemo(() => {
     if (selectedTraining === "All") return trainingAndWorkshops;
-    return trainingAndWorkshops.filter((item) => item.type === selectedTraining);
+    return trainingAndWorkshops.filter(
+      (item) => item.type === selectedTraining
+    );
   }, [selectedTraining]);
 
   const Card = ({ item, index }) => {
@@ -239,7 +242,9 @@ justify-between"
 
         {item.skills && (
           <div className="mt-2">
-            <p className="text-sm font-semibold text-cyan-300 mb-2">Skills Gained:</p>
+            <p className="text-sm font-semibold text-cyan-300 mb-2">
+              Skills Gained:
+            </p>
             <div className="flex flex-wrap gap-2">
               {item.skills.map((skill) => (
                 <span
@@ -269,7 +274,10 @@ justify-between"
 
   return (
     <TooltipProvider>
-      <section id="skills" className="py-20 relative overflow-hidden bg-gradient-to-b from-[#0e1a27] to-[#132433]">
+      <section
+        id="skills"
+        className="py-20 relative overflow-hidden bg-gradient-to-b from-[#0e1a27] to-[#132433]"
+      >
         <div className="container mx-auto px-6" ref={ref}>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -287,14 +295,20 @@ justify-between"
           </motion.div>
 
           <Tabs defaultValue="skills" className="w-full">
-            <TabsList className="grid w-full grid-cols-3 mb-12 glass-card border border-white/10">
-              <TabsTrigger value="skills" className="text-lg">
+            <TabsList className="w-full mb-12 glass-card border border-white/10 p-2 flex flex-wrap gap-2 justify-center md:grid md:grid-cols-3 md:gap-0 md:p-0">
+              <TabsTrigger
+                value="skills"
+                className="text-sm md:text-lg px-4 py-2 whitespace-nowrap">
                 Skills
               </TabsTrigger>
-              <TabsTrigger value="certifications" className="text-lg">
+              <TabsTrigger
+                value="certifications"
+                className="text-sm md:text-lg px-4 py-2 whitespace-nowrap">
                 Certifications
               </TabsTrigger>
-              <TabsTrigger value="training" className="text-lg">
+              <TabsTrigger
+                value="training"
+                className="text-sm md:text-lg px-4 py-2 whitespace-nowrap">
                 Training & Workshops
               </TabsTrigger>
             </TabsList>
@@ -306,7 +320,16 @@ justify-between"
                   {
                     title: "Programming & Tools",
                     icon: Code2,
-                    items: ["Python", "SQL", "C++", "Git/GitHub", "CI/CD", "Azure AI / Cloud", "VSCode", "Jupyter Notebook"],
+                    items: [
+                      "Python",
+                      "SQL",
+                      "C++",
+                      "Git/GitHub",
+                      "CI/CD",
+                      "Azure AI / Cloud",
+                      "VSCode",
+                      "Jupyter Notebook",
+                    ],
                   },
                   {
                     title: "Data Analysis & Visualization",
@@ -499,7 +522,9 @@ transition-all duration-300"
                         onClick={() => window.open(course.link, "_blank")}
                       >
                         <ExternalLink size={14} className="mr-2" />{" "}
-                        {course.type === "Training" ? "View Project" : "View Details"}
+                        {course.type === "Training"
+                          ? "View Project"
+                          : "View Details"}
                       </Button>
                     )}
 
@@ -548,7 +573,8 @@ transition-all duration-300"
     min-h-[160px] md:min-h-[180px]"
                 >
                   {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#00E5FF]/10 to-[#007EFF]/10
+                  <div
+                    className="absolute inset-0 bg-gradient-to-br from-[#00E5FF]/10 to-[#007EFF]/10
     rounded-xl pointer-events-none
     opacity-0 group-hover:opacity-40 transition-opacity duration-500 -z-10"
                   />
@@ -568,7 +594,6 @@ transition-all duration-300"
                     {stat.label}
                   </p>
                 </div>
-
               );
             })}
           </motion.div>
