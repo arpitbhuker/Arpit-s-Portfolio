@@ -213,7 +213,7 @@ const Projects = () => {
     border border-[#00E5FF]/20
     shadow-[0_4px_18px_rgba(0,229,255,0.08)]
     transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]
-    hover:scale-[1.28]
+    hover:scale-110
     hover:shadow-[0_12px_36px_rgba(0,229,255,0.25)]
   "
               >
@@ -300,7 +300,7 @@ const Projects = () => {
     bg-gradient-to-br from-cyan-500/10 to-blue-600/10
     border border-cyan-400/20 backdrop-blur-xl
     shadow-[0_0_20px_rgba(0,255,255,0.2)]
-    hover:shadow-[0_0_35px_rgba(0,255,255,0.35)]
+    hover:scale-110 hover:shadow-[0_0_35px_rgba(0,255,255,0.35)]
     transition-all duration-500
     max-w-4xl mx-auto"
             >
@@ -316,17 +316,6 @@ const Projects = () => {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-                  <Link to="/contact">
-                    <Button
-                      size="lg"
-                      className="bg-gradient-to-r from-cyan-400 to-blue-500
-    text-black font-semibold
-    hover:scale-110 hover:shadow-[0_0_20px_rgba(0,255,255,0.5)]
-    transition-all duration-300"
-                    >
-                      Get in Touch
-                    </Button>
-                  </Link>
                   <a
                     href="https://github.com/arpitbhuker"
                     target="_blank"
@@ -337,7 +326,7 @@ const Projects = () => {
                       size="lg"
                       className="border-cyan-400 text-cyan-300
                       hover:bg-cyan-400 hover:text-black
-                      hover:scale-90 hover:shadow-[0_0_25px_rgba(0,255,255,0.5)]
+                      hover:shadow-[0_0_25px_rgba(0,255,255,0.5)]
                       transition-all duration-300"
                     >
                       <Github className="w-4 h-4 mr-2" />
