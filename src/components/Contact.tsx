@@ -126,7 +126,7 @@ const Contact = () => {
           </div>
 
           {/* Right Column: Contact Info + Quick Links (lower) */}
-          <div className="space-y-8 mt-12 lg:mt-24">
+          <div className="space-y-8 mt-12 lg:mt-16">
             {/* Contact Info */}
             <div className="
     glass-card p-6 rounded-xl relative overflow-hidden

@@ -213,7 +213,7 @@ const Projects = () => {
     border border-[#00E5FF]/20
     shadow-[0_4px_18px_rgba(0,229,255,0.08)]
     transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]
-    hover:scale-350
+    hover:scale-450
     hover:shadow-[0_12px_36px_rgba(0,229,255,0.25)]
   "
               >
