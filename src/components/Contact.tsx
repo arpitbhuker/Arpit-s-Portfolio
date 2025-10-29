@@ -69,7 +69,7 @@ const Contact = () => {
                       border border-[#00E5FF]/20
                       shadow-[0_4px_18px_rgba(0,229,255,0.08)]
                       transition-all duration-300 ease-out
-                      hover:scale-90 hover:shadow-[0_12px_36px_rgba(0,229,255,0.25)]
+                      hover:shadow-[0_12px_36px_rgba(0,229,255,0.25)]
                     "
                   >
                     <div
@@ -104,7 +104,7 @@ const Contact = () => {
     border border-[#00E5FF]/20
     shadow-[0_4px_18px_rgba(0,229,255,0.08)]
     transition-all duration-300 ease-out
-    hover:scale-90 hover:shadow-[0_12px_36px_rgba(0,229,255,0.25)]
+    hover:shadow-[0_12px_36px_rgba(0,229,255,0.25)]
   "
 >
   <div
@@ -136,7 +136,7 @@ const Contact = () => {
     border border-[#00E5FF]/20
     shadow-[0_4px_18px_rgba(0,229,255,0.08)]
     transition-all duration-300 ease-out
-    hover:scale-90 hover:shadow-[0_12px_36px_rgba(0,229,255,0.25)]
+    hover:shadow-[0_12px_36px_rgba(0,229,255,0.25)]
   "
 >
   <div
