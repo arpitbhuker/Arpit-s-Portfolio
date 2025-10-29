@@ -1,8 +1,25 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { ExternalLink, Calendar, Brain, BarChart3, Trophy, PieChart, TrendingUp, Eye, Database, Grid2x2 } from "lucide-react";
+import {
+  ExternalLink,
+  Calendar,
+  Brain,
+  BarChart3,
+  Trophy,
+  PieChart,
+  TrendingUp,
+  Eye,
+  Database,
+  Grid2x2,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import gestureImg from "@/assets/gesture.png";
+import netflixImg from "@/assets/netflix.png";
+import evImg from "@/assets/ev.png";
+import amazonImg from "@/assets/amazon.png";
+import fraudImg from "@/assets/fraud.png";
+import twitterImg from "@/assets/twitter.png";
 
 const categoryIcons: Record<string, any> = {
   "AI/ML": Brain,
@@ -12,7 +29,13 @@ const categoryIcons: Record<string, any> = {
   All: Grid2x2,
 };
 
-const categoryFilters = ["All", "AI/ML", "Data Science", "Data Analytics", "Business Intelligence"];
+const categoryFilters = [
+  "All",
+  "AI/ML",
+  "Data Science",
+  "Data Analytics",
+  "Business Intelligence",
+];
 
 const Projects = () => {
   const ref = useRef(null);
@@ -20,107 +43,105 @@ const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   const projects = [
-  {
-    id: 1,
-    title: "Gesture Control System",
-    category: "AI/ML",
-    timeline: "Jul – Aug 2025",
-    image: "@/assets/gesture.png",
-    summary:
-      "Built a real-time gesture recognition system in Python using OpenCV to control presentations using two hand gestures, delivering smooth navigation at 20–30 FPS.",
-    achievements: [
-      "Achieved stable 20–30 FPS for seamless interaction",
-      "Eliminated manual slide-switching interruptions",
-      "Enhanced audience engagement with touch-free control"
-    ],
-    tech: ["Python", "OpenCV", "cvzone", "pywin32"],
-    link: "https://github.com/arpitbhuker/PPT-Gesture-Control"
-  },
-  {
-    id: 2,
-    title: "Netflix Data Analysis",
-    category: "Data Science",
-    timeline: "Feb – Mar 2025",
-    image: "@/assets/netflix.png",
-    summary:
-      "Analyzed 8,800+ Netflix titles to uncover genre, country, and rating trends, producing 15+ compelling visual insights for content strategy.",
-    achievements: [
-      "Discovered movies cover 65% of content portfolio",
-      "Revealed 3× content growth from 2010–2020",
-      "Delivered insights shaping future content targeting"
-    ],
-    tech: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn"],
-    link: "https://github.com/arpitbhuker/Netflix-Data-Analysis"
-  },
-  {
-    id: 3,
-    title: "Electric Vehicles Data Analysis",
-    category: "Data Analytics",
-    timeline: "Jun – Jul 2024",
-    image: "@/assets/ev.png",
-    summary:
-      "Developed an interactive Tableau dashboard analyzing 50,000+ EV registrations to monitor adoption trends across states and manufacturers.",
-    achievements: [
-      "Reduced reporting effort by 35% via automation",
-      "Visualized EV concentration with geo-heatmaps",
-      "Enabled real-time tracking for stakeholder decisions"
-    ],
-    tech: ["Tableau", "Excel"],
-    link: "https://github.com/arpitbhuker/Electric-Vehicles-Data-Analysis"
-  },
-  {
-    id: 4,
-    title: "Amazon Sales Analytics Dashboard",
-    category: "Business Intelligence",
-    timeline: "Jan – Feb 2024",
-    image: "@/assets/amazon.png",
-    summary:
-      "Created a Power BI analytics system for Amazon product performance using KPI tracking and DAX-driven visualizations.",
-    achievements: [
-      "Improved decision-making efficiency by 40%",
-      "Centralized trends for product/category analysis",
-      "Enabled near-real-time business visibility"
-    ],
-    tech: ["Power BI", "DAX", "Power Query", "Excel"],
-    link: "https://github.com/arpitbhuker/Amazon-Sales-Dashboard"
-  },
-  {
-    id: 5,
-    title: "AI-Driven Financial Fraud Detection System",
-    category: "AI/ML",
-    timeline: "Jan – Apr 2024",
-    image: "@/assets/fraud.png",
-    summary:
-      "Built ML models like XGBoost and Random Forest for fraud detection using 1M+ records achieving high accuracy and explainability.",
-    achievements: [
-      "Achieved 98% detection accuracy in testing",
-      "Enabled explainability using SHAP for transparency",
-      "Strengthened compliance with early risk alerts"
-    ],
-    tech: ["Python", "Machine Learning", "XGBoost", "SMOTE", "SHAP"],
-    link:
-      "https://github.com/arpitbhuker/AI-Driven-Financial-Fraud-Detection-System"
-  },
-  {
-    id: 6,
-    title: "Twitter Analytics Dashboard",
-    category: "Data Analytics",
-    timeline: "Mar – Apr 2025",
-    image: "@/assets/twitter.png",
-    summary:
-      "Developed a real-time Twitter insights dashboard to analyze engagement, impressions, click behavior, and hashtag performance.",
-    achievements: [
-      "Optimized engagement strategy using data signals",
-      "Delivered responsive mobile-friendly analytics",
-      "Enabled informed campaign performance tracking"
-    ],
-    tech: ["Power BI", "DAX", "Power Query", "Excel"],
-    link: "https://github.com/arpitbhuker/Twitter-Analytics-Dashboard"
-  }
-];
+    {
+      id: 1,
+      title: "Gesture Control System",
+      category: "AI/ML",
+      timeline: "Jul – Aug 2025",
+      image: gestureImg,
+      summary:
+        "Built a real-time gesture recognition system in Python using OpenCV to control presentations using two hand gestures, delivering smooth navigation at 20–30 FPS.",
+      achievements: [
+        "Achieved stable 20–30 FPS for seamless interaction",
+        "Eliminated manual slide-switching interruptions",
+        "Enhanced audience engagement with touch-free control",
+      ],
+      tech: ["Python", "OpenCV", "cvzone", "pywin32"],
+      link: "https://github.com/arpitbhuker/PPT-Gesture-Control",
+    },
+    {
+      id: 2,
+      title: "Netflix Data Analysis",
+      category: "Data Science",
+      timeline: "Feb – Mar 2025",
+      image: netflixImg,
+      summary:
+        "Analyzed 8,800+ Netflix titles to uncover genre, country, and rating trends, producing 15+ compelling visual insights for content strategy.",
+      achievements: [
+        "Discovered movies cover 65% of content portfolio",
+        "Revealed 3× content growth from 2010–2020",
+        "Delivered insights shaping future content targeting",
+      ],
+      tech: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn"],
+      link: "https://github.com/arpitbhuker/Netflix-Data-Analysis",
+    },
+    {
+      id: 3,
+      title: "Electric Vehicles Data Analysis",
+      category: "Data Analytics",
+      timeline: "Jun – Jul 2024",
+      image: evImg,
+      summary:
+        "Developed an interactive Tableau dashboard analyzing 50,000+ EV registrations to monitor adoption trends across states and manufacturers.",
+      achievements: [
+        "Reduced reporting effort by 35% via automation",
+        "Visualized EV concentration with geo-heatmaps",
+        "Enabled real-time tracking for stakeholder decisions",
+      ],
+      tech: ["Tableau", "Excel"],
+      link: "https://github.com/arpitbhuker/Electric-Vehicles-Data-Analysis",
+    },
+    {
+      id: 4,
+      title: "Amazon Sales Analytics Dashboard",
+      category: "Business Intelligence",
+      timeline: "Jan – Feb 2024",
+      image: amazonImg,
+      summary:
+        "Created a Power BI analytics system for Amazon product performance using KPI tracking and DAX-driven visualizations.",
+      achievements: [
+        "Improved decision-making efficiency by 40%",
+        "Centralized trends for product/category analysis",
+        "Enabled near-real-time business visibility",
+      ],
+      tech: ["Power BI", "DAX", "Power Query", "Excel"],
+      link: "https://github.com/arpitbhuker/Amazon-Sales-Dashboard",
+    },
+    {
+      id: 5,
+      title: "AI-Driven Financial Fraud Detection System",
+      category: "AI/ML",
+      timeline: "Jan – Apr 2024",
+      image: fraudImg,
+      summary:
+        "Built ML models like XGBoost and Random Forest for fraud detection using 1M+ records achieving high accuracy and explainability.",
+      achievements: [
+        "Achieved 98% detection accuracy in testing",
+        "Enabled explainability using SHAP for transparency",
+        "Strengthened compliance with early risk alerts",
+      ],
+      tech: ["Python", "Machine Learning", "XGBoost", "SMOTE", "SHAP"],
+      link: "https://github.com/arpitbhuker/AI-Driven-Financial-Fraud-Detection-System",
+    },
+    {
+      id: 6,
+      title: "Twitter Analytics Dashboard",
+      category: "Data Analytics",
+      timeline: "Mar – Apr 2025",
+      image: twitterImg,
+      summary:
+        "Developed a real-time Twitter insights dashboard to analyze engagement, impressions, click behavior, and hashtag performance.",
+      achievements: [
+        "Optimized engagement strategy using data signals",
+        "Delivered responsive mobile-friendly analytics",
+        "Enabled informed campaign performance tracking",
+      ],
+      tech: ["Power BI", "DAX", "Power Query", "Excel"],
+      link: "https://github.com/arpitbhuker/Twitter-Analytics-Dashboard",
+    },
+  ];
 
-
-const filteredProjects =
+  const filteredProjects =
     selectedCategory === "All"
       ? projects
       : projects.filter((p) => p.category === selectedCategory);
@@ -130,7 +151,6 @@ const filteredProjects =
       <div className="absolute inset-0 bg-gradient-glow"></div>
 
       <div className="container mx-auto px-6 relative z-10" ref={ref}>
-        
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -177,9 +197,17 @@ const filteredProjects =
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{
                   scale: 1.05,
-                  boxShadow: "0 0 35px rgba(255,255,255,0.15)",
                 }}
-                className="group glass-card rounded-2xl overflow-hidden transition-all border border-gray-700/50"
+                className="
+    group relative rounded-2xl overflow-hidden transition-all 
+    border border-white/10 bg-white/5 backdrop-blur-md
+    hover:bg-white/[0.08]
+    hover:border-transparent
+    before:absolute before:inset-0 before:rounded-2xl before:p-[2px]
+    before:bg-gradient-to-r before:from-blue-400 before:to-cyan-400
+    before:opacity-0 hover:before:opacity-100 before:transition-opacity
+    before:z-[-1] 
+  "
               >
                 {/* Banner */}
                 <img
@@ -189,10 +217,12 @@ const filteredProjects =
                 />
 
                 <div className="p-6 space-y-4">
-                  
                   {/* Category + Timeline */}
                   <div className="flex justify-between items-center">
-                    <Badge variant="secondary" className="text-xs px-2 py-1 flex items-center gap-1">
+                    <Badge
+                      variant="secondary"
+                      className="text-xs px-2 py-1 flex items-center gap-1"
+                    >
                       <Icon size={14} /> {project.category}
                     </Badge>
                     <div className="flex items-center text-sm text-muted-foreground">
