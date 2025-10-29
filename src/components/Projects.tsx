@@ -211,7 +211,7 @@ const Projects = () => {
     border border-[#00E5FF]/20
     shadow-[0_4px_18px_rgba(0,229,255,0.08)]
     transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]
-    hover:scale-[1.10]
+    hover:scale-[1.18]
     hover:shadow-[0_12px_36px_rgba(0,229,255,0.25)]
   "
               >
@@ -295,7 +295,13 @@ const Projects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <Card className="p-10 bg-gradient-to-br from-gray-900/60 via-gray-900/40 to-gray-900/60 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl">
+            <Card className="p-10 rounded-3xl 
+    bg-gradient-to-br from-cyan-500/10 to-blue-600/10
+    border border-cyan-400/20 backdrop-blur-xl
+    shadow-[0_0_20px_rgba(0,255,255,0.2)]
+    hover:shadow-[0_0_35px_rgba(0,255,255,0.35)]
+    transition-all duration-500
+    max-w-4xl mx-auto">
               <div className="space-y-6">
                 <h3 className="text-3xl font-bold">
                   Let’s <span className="gradient-text">Collaborate</span> 🚀
@@ -307,10 +313,13 @@ const Projects = () => {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-                  <a href="/contact">
+                  <a href="Contact">
                     <Button
                       size="lg"
-                      className="bg-gradient-primary hover:scale-105 transition-transform duration-300"
+                      className="bg-gradient-to-r from-cyan-400 to-blue-500
+                      text-black font-semibold
+                      hover:scale-110 hover:shadow-[0_0_20px_rgba(0,255,255,0.5)]
+                      transition-all duration-300"
                     >
                       Get in Touch
                     </Button>
@@ -320,10 +329,13 @@ const Projects = () => {
                     <Button
                       variant="outline"
                       size="lg"
-                      className="hover:scale-105 transition-transform duration-300 border-white/20"
+                      className="border-cyan-400 text-cyan-300
+                      hover:bg-cyan-400 hover:text-black
+                      hover:shadow-[0_0_25px_rgba(0,255,255,0.5)]
+                      transition-all duration-300"
                     >
                       <Github className="w-4 h-4 mr-2" />
-                      View GitHub
+                      View All Projects
                     </Button>
                   </a>
                 </div>
