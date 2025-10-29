@@ -25,7 +25,7 @@ const Projects = () => {
     title: "Gesture Control System",
     category: "AI/ML",
     timeline: "Jul – Aug 2025",
-    image: "/assets/gesture.png",
+    image: "@/assets/gesture.png",
     summary:
       "Built a real-time gesture recognition system in Python using OpenCV to control presentations using two hand gestures, delivering smooth navigation at 20–30 FPS.",
     achievements: [
@@ -41,7 +41,7 @@ const Projects = () => {
     title: "Netflix Data Analysis",
     category: "Data Science",
     timeline: "Feb – Mar 2025",
-    image: "/assets/netflix.png",
+    image: "@/assets/netflix.png",
     summary:
       "Analyzed 8,800+ Netflix titles to uncover genre, country, and rating trends, producing 15+ compelling visual insights for content strategy.",
     achievements: [
@@ -57,7 +57,7 @@ const Projects = () => {
     title: "Electric Vehicles Data Analysis",
     category: "Data Analytics",
     timeline: "Jun – Jul 2024",
-    image: "/assets/ev.png",
+    image: "@/assets/ev.png",
     summary:
       "Developed an interactive Tableau dashboard analyzing 50,000+ EV registrations to monitor adoption trends across states and manufacturers.",
     achievements: [
@@ -73,7 +73,7 @@ const Projects = () => {
     title: "Amazon Sales Analytics Dashboard",
     category: "Business Intelligence",
     timeline: "Jan – Feb 2024",
-    image: "/assets/amazon.png",
+    image: "@/assets/amazon.png",
     summary:
       "Created a Power BI analytics system for Amazon product performance using KPI tracking and DAX-driven visualizations.",
     achievements: [
@@ -89,7 +89,7 @@ const Projects = () => {
     title: "AI-Driven Financial Fraud Detection System",
     category: "AI/ML",
     timeline: "Jan – Apr 2024",
-    image: "/assets/fraud.png",
+    image: "@/assets/fraud.png",
     summary:
       "Built ML models like XGBoost and Random Forest for fraud detection using 1M+ records achieving high accuracy and explainability.",
     achievements: [
@@ -106,7 +106,7 @@ const Projects = () => {
     title: "Twitter Analytics Dashboard",
     category: "Data Analytics",
     timeline: "Mar – Apr 2025",
-    image: "/assets/twitter.png",
+    image: "@/assets/twitter.png",
     summary:
       "Developed a real-time Twitter insights dashboard to analyze engagement, impressions, click behavior, and hashtag performance.",
     achievements: [
@@ -121,118 +121,122 @@ const Projects = () => {
 
 
 const filteredProjects =
-selectedCategory === "All"
-  ? projects
-  : projects.filter((p) => p.category === selectedCategory);
+    selectedCategory === "All"
+      ? projects
+      : projects.filter((p) => p.category === selectedCategory);
 
-return (
-<section id="projects" className="py-20 relative overflow-hidden">
-  <div className="absolute inset-0 bg-gradient-glow"></div>
+  return (
+    <section id="projects" className="py-20 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-glow"></div>
 
-  <div className="container mx-auto px-6 relative z-10" ref={ref}>
-    
-    {/* Title */}
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.8 }}
-      className="text-center mb-12"
-    >
-      <h2 className="text-4xl md:text-5xl font-bold mb-4">
-        Featured <span className="gradient-text">Projects</span>
-      </h2>
-    </motion.div>
+      <div className="container mx-auto px-6 relative z-10" ref={ref}>
+        
+        {/* Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Featured <span className="gradient-text">Projects</span>
+          </h2>
+        </motion.div>
 
-    {/* ✅ Filter Tabs */}
-    <div className="flex flex-wrap justify-center gap-3 mb-10">
-      {categoryFilters.map((filter) => {
-        const Icon = categoryIcons[filter];
-        return (
-          <button
-            key={filter}
-            className={`px-4 py-2 rounded-full flex items-center gap-2 text-sm transition-all ${
-              selectedCategory === filter
-                ? "bg-primary text-white"
-                : "bg-gray-700/40 hover:bg-gray-600/50"
-            }`}
-            onClick={() => setSelectedCategory(filter)}
-          >
-            <Icon size={16} />
-            {filter}
-          </button>
-        );
-      })}
-    </div>
-
-    {/* ✅ Card Grid — 1 col mobile/tablet, 2 col desktop */}
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-      {filteredProjects.map((project, index) => {
-        const Icon = categoryIcons[project.category];
-
-        return (
-          <motion.div
-            key={project.id}
-            initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
-            className="group glass-card rounded-2xl overflow-hidden hover:shadow-[0_0_40px_rgba(59,130,246,0.4)] hover:bg-white/10 transition-all border border-gray-700/40"
-          >
-            {/* ✅ Banner */}
-            <img
-              src={project.image}
-              alt={project.title}
-              className="h-44 w-full object-cover group-hover:scale-105 transition-transform duration-500"
-            />
-
-            <div className="p-6 space-y-4">
-              
-              {/* Category + Timeline */}
-              <div className="flex justify-between items-center">
-                <Badge variant="secondary" className="text-xs px-2 py-1 flex items-center gap-1">
-                  <Icon size={14} /> {project.category}
-                </Badge>
-                <div className="flex items-center text-sm text-muted-foreground">
-                  <Calendar size={16} className="mr-1" />
-                  {project.timeline}
-                </div>
-              </div>
-
-              <h3 className="text-xl font-bold">{project.title}</h3>
-
-              <p className="text-sm text-muted-foreground line-clamp-3">
-                {project.summary}
-              </p>
-
-              {/* Achievements */}
-              <ul className="text-sm list-disc list-inside text-muted-foreground pl-1 space-y-1">
-                {project.achievements.map((a, i) => (
-                  <li key={i}>{a}</li>
-                ))}
-              </ul>
-
-              {/* Tech badges */}
-              <div className="flex flex-wrap gap-2">
-                {project.tech.map((t, i) => (
-                  <Badge key={i} variant="outline" className="text-xs">
-                    {t}
-                  </Badge>
-                ))}
-              </div>
-
-              <Button
-                className="w-full mt-3"
-                onClick={() => window.open(project.link, "_blank")}
+        {/* Filters */}
+        <div className="flex flex-wrap justify-center gap-3 mb-10">
+          {categoryFilters.map((filter) => {
+            const Icon = categoryIcons[filter];
+            return (
+              <button
+                key={filter}
+                className={`px-4 py-2 rounded-full flex items-center gap-2 text-sm transition-all ${
+                  selectedCategory === filter
+                    ? "bg-primary text-white shadow-lg"
+                    : "bg-gray-700/40 hover:bg-gray-600/50"
+                }`}
+                onClick={() => setSelectedCategory(filter)}
               >
-                View Project
-              </Button>
-            </div>
-          </motion.div>
-        );
-      })}
-    </div>
-  </div>
-</section>
-);
+                <Icon size={16} />
+                {filter}
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Cards */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          {filteredProjects.map((project, index) => {
+            const Icon = categoryIcons[project.category];
+
+            return (
+              <motion.div
+                key={project.id}
+                initial={{ opacity: 0, y: 60 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 0 35px rgba(255,255,255,0.15)",
+                }}
+                className="group glass-card rounded-2xl overflow-hidden transition-all border border-gray-700/50"
+              >
+                {/* Banner */}
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="h-44 w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+
+                <div className="p-6 space-y-4">
+                  
+                  {/* Category + Timeline */}
+                  <div className="flex justify-between items-center">
+                    <Badge variant="secondary" className="text-xs px-2 py-1 flex items-center gap-1">
+                      <Icon size={14} /> {project.category}
+                    </Badge>
+                    <div className="flex items-center text-sm text-muted-foreground">
+                      <Calendar size={16} className="mr-1" />
+                      {project.timeline}
+                    </div>
+                  </div>
+
+                  <h3 className="text-xl font-bold">{project.title}</h3>
+
+                  <p className="text-sm text-muted-foreground">
+                    {project.summary}
+                  </p>
+
+                  {/* Achievements */}
+                  <ul className="text-sm list-disc list-inside text-muted-foreground space-y-1">
+                    {project.achievements.map((a, i) => (
+                      <li key={i}>{a}</li>
+                    ))}
+                  </ul>
+
+                  {/* Tech badges */}
+                  <div className="flex flex-wrap gap-2">
+                    {project.tech.map((t, i) => (
+                      <Badge key={i} variant="outline" className="text-xs">
+                        {t}
+                      </Badge>
+                    ))}
+                  </div>
+
+                  <Button
+                    className="w-full mt-3"
+                    onClick={() => window.open(project.link, "_blank")}
+                  >
+                    View Project
+                  </Button>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Projects;
