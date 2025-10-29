@@ -200,76 +200,81 @@ const Projects = () => {
                   ease: "easeOut",
                 }}
                 whileHover={{
-                  scale: 1.035,
+                  scale: 1.04,
                   transition: { duration: 0.25, ease: "easeOut" },
                 }}
                 className="
                 group relative rounded-2xl overflow-hidden
                 bg-white/5 backdrop-blur-xl
                 border border-white/10
-                shadow-[0_0_18px_rgba(0,255,255,0.05)]
+                shadow-[0_0_25px_rgba(0,255,255,0.05)]
                 transition-all
               "
               >
-                {/* 🔥 External Neon Aura + Smooth Fade */}
+                {/* ✅ Internal Glow Aura — NO SEAMS */}
                 <div
                   className="
-                  pointer-events-none absolute -inset-2 rounded-3xl
-                  bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-500
+                  absolute inset-0 rounded-2xl pointer-events-none
+                  bg-gradient-to-br from-blue-500/40 via-cyan-400/40 to-blue-500/40
                   opacity-0 group-hover:opacity-100
-                  blur-[30px] transition-all duration-600 ease-out
-                  -z-10
+                  blur-[32px] transition-all duration-500 ease-out
+                  z-0
                 "
                 />
 
-                {/* CARD CONTENT BELOW — UNCHANGED */}
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="h-44 w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
-                />
+                {/* ✅ Card Content */}
+                <div className="relative z-10">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="h-44 w-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                  />
 
-                <div className="p-6 space-y-4">
-                  {/* Category + Timeline */}
-                  <div className="flex justify-between items-center">
-                    <Badge
-                      variant="secondary"
-                      className="text-xs px-2 py-1 flex items-center gap-1"
-                    >
-                      <Icon size={14} /> {project.category}
-                    </Badge>
-                    <div className="flex items-center text-sm text-muted-foreground">
-                      <Calendar size={16} className="mr-1" />
-                      {project.timeline}
-                    </div>
-                  </div>
-
-                  <h3 className="text-xl font-bold">{project.title}</h3>
-
-                  <p className="text-sm text-muted-foreground">
-                    {project.summary}
-                  </p>
-
-                  <ul className="text-sm list-disc list-inside text-muted-foreground space-y-1">
-                    {project.achievements.map((a, i) => (
-                      <li key={i}>{a}</li>
-                    ))}
-                  </ul>
-
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((t, i) => (
-                      <Badge key={i} variant="outline" className="text-xs">
-                        {t}
+                  <div className="p-6 space-y-4">
+                    {/* Category + Timeline */}
+                    <div className="flex justify-between items-center">
+                      <Badge
+                        variant="secondary"
+                        className="text-xs flex items-center gap-1"
+                      >
+                        <Icon size={14} /> {project.category}
                       </Badge>
-                    ))}
-                  </div>
 
-                  <Button
-                    className="w-full mt-3"
-                    onClick={() => window.open(project.link, "_blank")}
-                  >
-                    View Project
-                  </Button>
+                      <div className="flex items-center text-sm text-muted-foreground">
+                        <Calendar size={16} className="mr-1" />
+                        {project.timeline}
+                      </div>
+                    </div>
+
+                    <h3 className="text-xl font-bold group-hover:text-primary transition-colors">
+                      {project.title}
+                    </h3>
+
+                    <p className="text-sm text-muted-foreground">
+                      {project.summary}
+                    </p>
+
+                    <ul className="text-sm text-muted-foreground space-y-1 list-disc list-inside">
+                      {project.achievements.map((a, i) => (
+                        <li key={i}>{a}</li>
+                      ))}
+                    </ul>
+
+                    <div className="flex flex-wrap gap-2">
+                      {project.tech.map((t, i) => (
+                        <Badge key={i} variant="outline" className="text-xs">
+                          {t}
+                        </Badge>
+                      ))}
+                    </div>
+
+                    <Button
+                      className="w-full mt-3"
+                      onClick={() => window.open(project.link, "_blank")}
+                    >
+                      View Project
+                    </Button>
+                  </div>
                 </div>
               </motion.div>
             );
