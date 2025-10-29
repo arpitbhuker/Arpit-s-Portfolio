@@ -195,8 +195,8 @@ const Projects = () => {
                 initial={{ opacity: 0, y: 60, scale: 0.98 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{
-                  duration: 0.5,
-                  delay: index * 0.07,
+                  duration: 0.45,
+                  delay: index * 0.06,
                   ease: "easeOut",
                 }}
                 whileHover={{
@@ -204,26 +204,23 @@ const Projects = () => {
                   transition: { duration: 0.25, ease: "easeOut" },
                 }}
                 className="
-    group relative rounded-2xl overflow-hidden
+    group relative rounded-2xl overflow-hidden transition-all
     bg-white/5 backdrop-blur-lg border border-white/10
-    shadow-[0_0_20px_rgba(0,255,255,0.05)]
-    hover:shadow-[0_0_45px_rgba(0,255,255,0.25)]
-    transition-all
+    shadow-[0_0_18px_rgba(0,255,255,0.05)]
   "
               >
-                {/* Glow Animation Border */}
+                {/* External Aura Glow Layer */}
                 <div
                   className="
-      pointer-events-none absolute inset-0 rounded-2xl
+      pointer-events-none absolute -inset-2 rounded-3xl
       bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-500
-      opacity-0 group-hover:opacity-70
-      blur-xl transition-opacity duration-500 ease-out
-      animate-[pulseGlow_3s_infinite]
+      opacity-0 group-hover:opacity-100
+      blur-2xl transition-opacity duration-500 ease-out
       -z-10
     "
                 />
 
-                {/* Banner */}
+                {/* CARD CONTENT BELOW — UNCHANGED */}
                 <img
                   src={project.image}
                   alt={project.title}
