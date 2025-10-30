@@ -387,7 +387,7 @@ transition-all duration-300"
                         {group.items.map((skill) => (
                           <span
                             key={skill}
-                            className="px-3 py-1 text-sm rounded-lg bg-white/5 border border-cyan-300/30
+                            className="px-3 py-1 text-sm rounded-lg bg-cyan-950/40 border border-cyan-300/30
                             hover:bg-cyan-400/20 hover:border-cyan-200/40
                             hover:scale-110 transition-all duration-200"
                           >
@@ -480,7 +480,7 @@ transition-all duration-300"
                           {course.skillsDeveloped.map((skill) => (
                             <span
                               key={skill}
-                              className="px-3 py-1 text-xs rounded-lg bg-white/5 border border-cyan-400/30
+                              className="px-3 py-1 text-xs rounded-lg bg-cyan-950/40 border border-cyan-400/30
                               hover:bg-cyan-400/20 hover:border-cyan-300/40
                               hover:scale-110 transition-all duration-200"
                             >

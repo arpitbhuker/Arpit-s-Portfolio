@@ -64,7 +64,7 @@ const Testimonials = () => {
             {/* Content (elevated above glow) */}
             {/* Content */}
             <div className="relative z-10">
-              <blockquote className="text-lg italic text-muted-foreground mb-4 leading-relaxed relative px-8">
+              <blockquote className="text-lg italic text-white mb-4 leading-relaxed relative px-8">
                 <Quote
                   className="absolute -top-2 -left-2 text-primary/40"
                   size={24}
