@@ -244,7 +244,7 @@ justify-between"
               {item.skills.map((skill) => (
                 <span
                   key={skill}
-                  className="px-3 py-1 text-xs rounded-full bg-white/5 text-cyan-100 border border-cyan-400/30 
+                  className="px-3 py-1 text-xs rounded-full bg-cyan-950/40 text-cyan-100 border border-cyan-400/30 
                   hover:bg-cyan-400/20 hover:border-cyan-300/40 hover:scale-[1.08] transition-all duration-200"
                 >
                   {skill}
