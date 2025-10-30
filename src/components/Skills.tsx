@@ -269,7 +269,7 @@ justify-between"
 
   return (
     <TooltipProvider>
-      <section id="skills" className="py-20 relative overflow-hidden bg-gradient-to-b from-[#0e1a27] to-[#132433]">
+      <section id="skills" className="py-20 relative overflow-hidden bg-gradient-to-b from-[#12304a] to-[#1c3954]">
         <div className="container mx-auto px-6" ref={ref}>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
