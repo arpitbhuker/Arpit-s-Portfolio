@@ -193,22 +193,25 @@ const Hero = () => {
             className="flex justify-center lg:justify-end order-1 lg:order-2"
           >
             <motion.div
-              whileHover={{ rotateY: 15, rotateX: 8, scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 200, damping: 15 }}
+              whileHover={{ scale: 1.04 }}         // ✅ Pop-out only
+              transition={{ type: "spring", stiffness: 180, damping: 15 }}
               className="relative w-80 h-[420px] [perspective:1200px] shadow-2xl rounded-2xl overflow-visible group"
             >
+              {/* Soft radial glow */}
+              <div className="absolute -inset-10 bg-primary/10 blur-3xl rounded-full -z-30"></div>
+
+              {/* Frames */}
               <div className="absolute inset-0 -z-20 rounded-2xl border border-primary/20 transform -rotate-6 scale-95"></div>
               <div className="absolute inset-0 -z-10 rounded-2xl border border-accent/30 transform rotate-6 scale-105"></div>
 
+              {/* Profile Image — now static */}
               <motion.img
                 src={arpitProfile1}
                 alt="Arpit"
-                initial={{ y: 0 }}
-                animate={{ y: [0, -8, 0] }}
-                transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
-                className="w-full h-full object-cover relative z-10 rounded-2xl transition-transform duration-700 ease-out group-hover:scale-110"
+                initial={{ opacity: 1 }}         // ❗ No floating animation
+                className="w-full h-full object-cover relative z-10 rounded-2xl transition-transform duration-700 ease-out group-hover:scale-105"
                 style={{
-                  transform: "translateZ(50px)",
+                  transform: "translateZ(40px)",   // slight depth effect
                   filter: "drop-shadow(0 15px 20px rgba(0,0,0,0.4))",
                 }}
               />

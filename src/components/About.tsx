@@ -85,7 +85,7 @@ const About = () => {
       degree: "B.E. CSE (AI & ML)",
       percentage: "CGPA: 8.11",
       subjects:
-        "Data Structures, Machine Learning, Neural Networks, Computer Vision, NLP",
+        "Machine Learning, DBMS, Data Structures, Computer Vision, NLP",
       icon: Award,
     },
   ];
@@ -166,15 +166,19 @@ const About = () => {
           >
             <div>
               <h3 className="text-2xl font-bold mb-4 text-primary">Overview</h3>
-              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-6 break-words">
-                I'm a final-year B.E. CSE (AI & ML) student at Chandigarh University with a passion
-                for artificial intelligence and data science. My journey in technology is driven by
-                curiosity and the desire to solve real-world problems using data-driven approaches.
+
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-6 break-words text-justify">
+                I work across machine learning, data analytics, and intelligent systems, turning raw data into clear,
+                usable insight. My focus is on building reliable predictive models, identifying meaningful patterns, and
+                creating solutions that solve practical problems. I approach every project with a grounded, hands-on
+                mindset—understanding the data, refining it, and shaping systems that perform well in real use.
               </p>
-              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed break-words">
-                With hands-on experience in machine learning, data analysis, and visualization, I
-                specialize in extracting meaningful insights from complex datasets and building
-                predictive models that create tangible business value.
+
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed break-words text-justify">
+                Alongside my core work in AI/ML and data science, I’ve explored areas like computer vision, detection-focused
+                projects, and full application development. I’ve also handled front-end and deployment while building my
+                portfolio, giving me a broader view of how complete systems fit together. These experiences expand my
+                perspective while keeping my foundation firmly rooted in thoughtful, data-driven problem-solving.
               </p>
             </div>
 

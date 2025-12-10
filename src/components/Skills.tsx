@@ -306,7 +306,7 @@ justify-between"
                   {
                     title: "Programming & Tools",
                     icon: Code2,
-                    items: ["Python", "SQL", "C++", "Git/GitHub", "CI/CD", "Azure AI / Cloud", "VSCode", "Jupyter Notebook"],
+                    items: ["Python", "SQL", "OOPs", "Git/GitHub", "CI/CD", "Azure AI / Cloud", "VSCode", "Jupyter Notebook"],
                   },
                   {
                     title: "Data Analysis & Visualization",
@@ -318,7 +318,6 @@ justify-between"
                       "Seaborn",
                       "EDA",
                       "Data Wrangling",
-                      "Statistical Analysis",
                       "Dashboard Storytelling",
                     ],
                   },
@@ -330,7 +329,6 @@ justify-between"
                       "Pandas",
                       "scikit-learn",
                       "TensorFlow",
-                      "Supervised/Unsupervised Learning",
                       "Predictive Modeling",
                       "Feature Engineering",
                       "Model Deployment",
@@ -341,7 +339,6 @@ justify-between"
                     icon: MessageSquareCode,
                     items: [
                       "MySQL",
-                      "DBMS",
                       "NLP",
                       "LLMs / OpenAI APIs",
                       "Text Analysis",
