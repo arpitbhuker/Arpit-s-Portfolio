@@ -34,6 +34,17 @@ const Skills = () => {
 
   const certifications = [
     {
+      title: "SQL (Intermediate) Skill Certification",
+      provider: "HackerRank",
+      date: "Dec 2025",
+      icon: Database,
+      link: "https://www.hackerrank.com/certificates/0B86E4E417BD",
+      description:
+        "Validated intermediate-level SQL proficiency through a hands-on assessment covering joins, subqueries, aggregations, and real-world data querying scenarios.",
+      skills: ["SQL Joins", "Subqueries", "Aggregations", "Data Filtering", "Query Optimization"],
+      category: "Data Analytics",
+    },
+    {
       title: "Data Visualisation: Empowering Business with Effective Insights",
       provider: "TCS (via Forage)",
       date: "Sep 2025",
@@ -339,12 +350,13 @@ justify-between"
                     icon: MessageSquareCode,
                     items: [
                       "MySQL",
-                      "NLP",
-                      "LLMs / OpenAI APIs",
-                      "Text Analysis",
-                      "Computer Vision",
                       "ETL Pipeline",
                       "Data Quality Management",
+                      "NLP",
+                      "LLMs / OpenAI APIs",
+                      "Computer Vision",
+                      "Generative AI",
+                      "RAG",
                     ],
                   },
                   {

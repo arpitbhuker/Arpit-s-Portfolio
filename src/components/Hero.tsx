@@ -168,7 +168,7 @@ const Hero = () => {
               <p className="text-sm text-muted-foreground mb-3">Download Resume</p>
               <div className="flex gap-3">
                 <a
-                  href="https://drive.google.com/file/d/1YAls6EqMdVR8R5-At9twNxQJtCipPmYJ/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/1XhdcYjdEOUuLJdFpV34B6F4HUACaU3bJ/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

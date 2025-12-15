@@ -11,6 +11,7 @@ import {
   Github,
   Eye,
   Database,
+  Code,
   Grid2x2,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -23,12 +24,16 @@ import evImg from "@/assets/ev.png";
 import amazonImg from "@/assets/amazon.png";
 import fraudImg from "@/assets/fraud.png";
 import twitterImg from "@/assets/twitter.png";
+import portfolioImg from "@/assets/portfolio.png";
+import phishnetImg from "@/assets/phishnet.png";
+import shoppingBehaviorImg from "@/assets/shopping_behavior.png";
 
 const categoryIcons: Record<string, any> = {
   "AI/ML": Brain,
   "Data Science": Database,
   "Data Analytics": PieChart,
   "Business Intelligence": BarChart3,
+  "Web Development": Code,
   All: Grid2x2,
 };
 
@@ -38,6 +43,7 @@ const categoryFilters = [
   "Data Science",
   "Data Analytics",
   "Business Intelligence",
+  "Web Development",
 ];
 
 const Projects = () => {
@@ -48,6 +54,54 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      title: "PhishNet: Suspicious Link Analyzer",
+      category: "AI/ML",
+      timeline: "Oct - Dec 2025",
+      image: phishnetImg,
+      summary:
+        "Developed a local phishing URL analysis tool that evaluates suspicious links using structured feature extraction and rule-based risk scoring to flag potentially malicious websites.",
+      achievements: [
+        "Implemented 8+ URL-based detection signals for risk evaluation",
+        "Reduced setup friction by packaging the tool as a standalone executable",
+        "Enabled fast, offline link analysis without external dependencies",
+      ],
+      tech: ["Python", "Flask", "PyInstaller", "Feature Engineering"],
+      link: "https://github.com/arpitbhuker/PhishNet",
+    },
+    {
+      id: 2,
+      title: "Customer Shopping Behavior Analysis",
+      category: "Data Science",
+      timeline: "Oct – Nov 2025",
+      image: shoppingBehaviorImg,
+      summary:
+        "Analyzed retail transaction data using Python, SQL, and Power BI to uncover purchasing patterns, customer segments, and sales trends that support data-driven business decisions.",
+      achievements: [
+        "Identified key purchasing trends across customer segments",
+        "Converted raw transactional data into structured business insights",
+        "Delivered an interactive dashboard for clear stakeholder reporting",
+      ],
+      tech: ["Python", "MySQL", "Power BI", "Pandas", "SQL"],
+      link: "https://github.com/arpitbhuker/Customer_Shopping_Behavior_Data_Analysis",
+    },
+    {
+      id: 3,
+      title: "Personal Portfolio Website",
+      category: "Web Development",
+      timeline: "Sep – Oct 2025",
+      image: portfolioImg,
+      summary:
+        "Designed and developed a responsive personal portfolio to showcase projects, skills, and experience while exploring modern frontend workflows and performance-focused UI design.",
+      achievements: [
+        "Structured multiple projects into a clear, recruiter-friendly layout",
+        "Improved content discoverability through modular sections",
+        "Demonstrated ability to learn and apply new frontend tools independently",
+      ],
+      tech: ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "Vite"],
+      link: "https://github.com/arpitbhuker/Arpit-s-Portfolio",
+    },
+    {
+      id: 4,
       title: "Gesture Control System",
       category: "AI/ML",
       timeline: "Jul – Aug 2025",
@@ -59,11 +113,11 @@ const Projects = () => {
         "Eliminated manual slide-switching interruptions",
         "Enhanced audience engagement with touch-free control",
       ],
-      tech: ["Python", "OpenCV", "cvzone", "pywin32"],
+      tech: ["Python", "OpenCV", "cvzone", "win32com"],
       link: "https://github.com/arpitbhuker/PPT-Gesture-Control",
     },
     {
-      id: 2,
+      id: 5,
       title: "Netflix Data Analysis",
       category: "Data Science",
       timeline: "Feb – Mar 2025",
@@ -79,7 +133,7 @@ const Projects = () => {
       link: "https://github.com/arpitbhuker/Netflix-Data-Analysis",
     },
     {
-      id: 3,
+      id: 6,
       title: "Electric Vehicles Data Analysis",
       category: "Data Analytics",
       timeline: "Jun – Jul 2024",
@@ -95,7 +149,7 @@ const Projects = () => {
       link: "https://github.com/arpitbhuker/Electric-Vehicles-Data-Analysis",
     },
     {
-      id: 4,
+      id: 7,
       title: "Amazon Sales Analytics Dashboard",
       category: "Business Intelligence",
       timeline: "Jan – Feb 2024",
@@ -111,7 +165,7 @@ const Projects = () => {
       link: "https://github.com/arpitbhuker/Amazon-Sales-Dashboard",
     },
     {
-      id: 5,
+      id: 8,
       title: "AI-Driven Financial Fraud Detection System",
       category: "AI/ML",
       timeline: "Jan – Apr 2024",
@@ -127,7 +181,7 @@ const Projects = () => {
       link: "https://github.com/arpitbhuker/AI-Driven-Financial-Fraud-Detection-System",
     },
     {
-      id: 6,
+      id: 9,
       title: "Twitter Analytics Dashboard",
       category: "Data Analytics",
       timeline: "Mar – Apr 2025",
