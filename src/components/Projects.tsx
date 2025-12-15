@@ -184,7 +184,7 @@ const Projects = () => {
       id: 9,
       title: "Twitter Analytics Dashboard",
       category: "Data Analytics",
-      timeline: "Mar – Apr 2025",
+      timeline: "Mar – Apr 2024",
       image: twitterImg,
       summary:
         "Developed a real-time Twitter insights dashboard to analyze engagement, impressions, click behavior, and hashtag performance.",
