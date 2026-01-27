@@ -23,7 +23,7 @@ It showcases selected projects, achievements, and skills in **Artificial Intelli
 ## 📁 Project Info
 
 - **Repository URL:** [Arpit's Portfolio](https://github.com/arpitbhuker/Arpit-s-Portfolio/tree/main)
-- **Check out my portfolio here:** 🌐 [Visit Portfolio](https://arpit-bhuker.vercel.app)
+- **Check out my portfolio here:** 🌐 [Visit Portfolio](https://arpitbhuker.vercel.app)
 
 ---
 
