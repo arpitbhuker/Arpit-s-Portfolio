@@ -42,7 +42,7 @@ const Skills = () => {
       description:
         "Validated intermediate-level SQL proficiency through a hands-on assessment covering joins, subqueries, aggregations, and real-world data querying scenarios.",
       skills: ["SQL Joins", "Subqueries", "Aggregations", "Data Filtering", "Query Optimization"],
-      category: "Data Analytics",
+      category: "Database",
     },
     {
       title: "Data Visualisation: Empowering Business with Effective Insights",
@@ -226,14 +226,14 @@ const Skills = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: 0.08 * index }}
         className="p-7 rounded-2xl
-bg-gradient-to-b from-[#1c3954] to-[#163146]
-border border-white/15
-backdrop-blur-xl shadow-lg
-hover:scale-[1.07] hover:-translate-y-4
-hover:shadow-[0_0_45px_rgba(0,200,255,0.45)]
-flex flex-col
-min-h-[310px] md:min-h-[350px]
-justify-between"
+          bg-gradient-to-b from-[#1c3954] to-[#163146]
+          border border-white/15
+          backdrop-blur-xl shadow-lg
+          hover:scale-[1.07] hover:-translate-y-4
+          hover:shadow-[0_0_45px_rgba(0,200,255,0.45)]
+          flex flex-col
+          min-h-[310px] md:min-h-[350px]
+          justify-between"
       >
         <div className="flex items-center justify-between mb-3">
           <Icon className="text-cyan-300" size={28} />
@@ -317,7 +317,7 @@ justify-between"
                   {
                     title: "Programming & Tools",
                     icon: Code2,
-                    items: ["Python", "SQL", "OOPs", "Git/GitHub", "CI/CD", "Azure AI / Cloud", "VSCode", "Jupyter Notebook"],
+                    items: ["Python", "SQL", "OOPs", "Git/GitHub", "Azure AI / Cloud", "VSCode", "Jupyter Notebook"],
                   },
                   {
                     title: "Data Analysis & Visualization",
@@ -379,11 +379,11 @@ justify-between"
                       animate={isInView ? { opacity: 1, y: 0 } : {}}
                       transition={{ duration: 0.5, delay: 0.08 * index }}
                       className="p-7 rounded-2xl
-bg-gradient-to-b from-[#1c3954] to-[#163146]
-border border-white/15
-shadow-lg hover:scale-[1.07] hover:-translate-y-4
-hover:shadow-[0_0_45px_rgba(0,200,255,0.45)]
-transition-all duration-300"
+                        bg-gradient-to-b from-[#1c3954] to-[#163146]
+                        border border-white/15
+                        shadow-lg hover:scale-[1.07] hover:-translate-y-4
+                        hover:shadow-[0_0_45px_rgba(0,200,255,0.45)]
+                        transition-all duration-300"
                     >
                       <div className="flex items-center gap-3 mb-3">
                         <Icon className="text-cyan-300" size={26} />
@@ -457,11 +457,11 @@ transition-all duration-300"
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: 0.1 * i }}
                     className="p-7 rounded-2xl
-bg-gradient-to-b from-[#1c3954] to-[#163146]
-border border-white/15 backdrop-blur-xl shadow-lg
-hover:scale-[1.07] hover:-translate-y-4
-hover:shadow-[0_0_45px_rgba(0,200,255,0.45)]
-transition-all duration-300"
+                      bg-gradient-to-b from-[#1c3954] to-[#163146]
+                      border border-white/15 backdrop-blur-xl shadow-lg
+                      hover:scale-[1.07] hover:-translate-y-4
+                      hover:shadow-[0_0_45px_rgba(0,200,255,0.45)]
+                      transition-all duration-300"
                   >
                     <div className="flex items-center justify-between mb-3">
                       <course.icon className="text-cyan-300" size={28} />
@@ -538,8 +538,8 @@ transition-all duration-300"
             className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
           >
             {[
-              { number: "6+", label: "Projects", icon: Trophy },
-              { number: "5+", label: "Certifications", icon: Award },
+              { number: "10+", label: "Projects", icon: Trophy },
+              { number: "6+", label: "Certifications", icon: Award },
               { number: "4+", label: "Training/Workshops", icon: BookOpen },
               { number: "3+", label: "Years Learning", icon: Brain },
             ].map((stat, index) => {
@@ -548,18 +548,18 @@ transition-all duration-300"
                 <div
                   key={stat.label}
                   className="flex flex-col items-center justify-between
-    text-center p-6 rounded-xl w-full relative overflow-hidden group
-    bg-[#0A2A43]/60 backdrop-blur-xl
-    border border-[#00E5FF]/20
-    shadow-[0_4px_18px_rgba(0,229,255,0.08)]
-    transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]
-    hover:scale-[1.05] hover:shadow-[0_10px_30px_rgba(0,229,255,0.18)]
-    min-h-[160px] md:min-h-[180px]"
+                    text-center p-6 rounded-xl w-full relative overflow-hidden group
+                    bg-[#0A2A43]/60 backdrop-blur-xl
+                    border border-[#00E5FF]/20
+                    shadow-[0_4px_18px_rgba(0,229,255,0.08)]
+                    transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]
+                    hover:scale-[1.05] hover:shadow-[0_10px_30px_rgba(0,229,255,0.18)]
+                    min-h-[160px] md:min-h-[180px]"
                 >
                   {/* Gradient Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-br from-[#00E5FF]/10 to-[#007EFF]/10
-    rounded-xl pointer-events-none
-    opacity-0 group-hover:opacity-40 transition-opacity duration-500 -z-10"
+                    rounded-xl pointer-events-none
+                    opacity-0 group-hover:opacity-40 transition-opacity duration-500 -z-10"
                   />
 
                   <Icon className="mx-auto mb-3 text-primary" size={32} />

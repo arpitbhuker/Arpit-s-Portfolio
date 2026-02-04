@@ -27,18 +27,18 @@ const EducationCard = ({ item, index }) => {
           } md:w-5/12 w-full`}
       >
         <div className="rounded-xl p-6 w-full relative overflow-hidden group
-     bg-[#0A2A43]/60 backdrop-blur-xl
-     border border-[#00E5FF]/20
-     shadow-[0_0_25px_rgba(0,229,255,0.08)]
-     transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]
-     hover:scale-[1.05]
-     hover:border-[#00E5FF]/40 hover:shadow-[0_0_35px_rgba(0,229,255,0.15)]"
+          bg-[#0A2A43]/60 backdrop-blur-xl
+          border border-[#00E5FF]/20
+          shadow-[0_0_25px_rgba(0,229,255,0.08)]
+          transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]
+          hover:scale-[1.05]
+          hover:border-[#00E5FF]/40 hover:shadow-[0_0_35px_rgba(0,229,255,0.15)]"
         >
           <div className="absolute inset-0 bg-gradient-to-br from-[#00E5FF]/10 to-[#007EFF]/10
-     rounded-xl pointer-events-none
-     opacity-0 group-hover:opacity-40
-     transition-opacity duration-500
-     -z-10"
+            rounded-xl pointer-events-none
+            opacity-0 group-hover:opacity-40
+            transition-opacity duration-500
+            -z-10"
           />
           <div className="flex items-center justify-between mb-2 flex-wrap gap-2">
             <span className="text-primary font-semibold flex items-center">
@@ -83,9 +83,9 @@ const About = () => {
       year: "2022-2026",
       school: "Chandigarh University",
       degree: "B.E. CSE (AI & ML)",
-      percentage: "CGPA: 8.11",
+      percentage: "CGPA: 8.06",
       subjects:
-        "Machine Learning, DBMS, Data Structures, Computer Vision, NLP",
+        "ML,DL, DBMS, Data Mining, Data Structures, Computer Vision, NLP",
       icon: Award,
     },
   ];
@@ -168,29 +168,32 @@ const About = () => {
               <h3 className="text-2xl font-bold mb-4 text-primary">Overview</h3>
 
               <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-6 break-words text-justify">
-                I work across machine learning, data analytics, and intelligent systems, turning raw data into clear,
-                usable insight. My focus is on building reliable predictive models, identifying meaningful patterns, and
-                creating solutions that solve practical problems. I approach every project with a grounded, hands-on
-                mindset—understanding the data, refining it, and shaping systems that perform well in real use.
+                I work across applied AI, machine learning, and data analysis, building systems that turn raw data into
+                reliable, usable outcomes. My work focuses on designing end-to-end pipelines, developing predictive models,
+                and extracting meaningful patterns that support real decisions. I approach problems with a hands-on mindset,
+                starting from data understanding and preparation through to evaluation and system-level reliability in
+                practical use.
               </p>
 
               <p className="text-base sm:text-lg text-muted-foreground leading-relaxed break-words text-justify">
-                Alongside my core work in AI/ML and data science, I’ve explored areas like computer vision, detection-focused
-                projects, and full application development. I’ve also handled front-end and deployment while building my
-                portfolio, giving me a broader view of how complete systems fit together. These experiences expand my
-                perspective while keeping my foundation firmly rooted in thoughtful, data-driven problem-solving.
+                Alongside core work in AI and data-focused systems, I have built projects in areas such as computer vision,
+                intelligent detection, and analytics automation. I have also handled front-end development and deployment
+                while building and maintaining my portfolio, giving me experience across the full project lifecycle. These
+                experiences broaden my perspective while keeping my work grounded in structured thinking and data-driven
+                problem-solving.
               </p>
+
             </div>
 
             <div>
               <h3 className="text-2xl font-bold mb-4 text-primary">What I Bring to the Table</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 {[
-                  "Machine Learning & Model Development",
-                  "Analytical Thinking",
+                  "Applied Machine Learning & Modeling",
+                  "Analytical & Systems Thinking",
                   "Data Analysis & Visualization",
-                  "Collaboration & Communication",
-                  "Python & Data Science Tools",
+                  "Technical Communication & Collaboration",
+                  "Python & Data-Centric Tooling",
                   "Adaptability & Continuous Learning",
                 ].map((skill, index) => (
                   <motion.div

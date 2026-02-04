@@ -27,11 +27,12 @@ import twitterImg from "@/assets/twitter.png";
 import portfolioImg from "@/assets/portfolio.png";
 import phishnetImg from "@/assets/phishnet.png";
 import shoppingBehaviorImg from "@/assets/shopping_behavior.png";
+import aiDataAgentImg from "@/assets/aidataagent.png";
 
 const categoryIcons: Record<string, any> = {
-  "AI/ML": Brain,
-  "Data Science": Database,
-  "Data Analytics": PieChart,
+  "Applied AI": Brain,
+  "Computer Vision": Eye,
+  "Data Analysis": PieChart,
   "Business Intelligence": BarChart3,
   "Web Development": Code,
   All: Grid2x2,
@@ -39,9 +40,9 @@ const categoryIcons: Record<string, any> = {
 
 const categoryFilters = [
   "All",
-  "AI/ML",
-  "Data Science",
-  "Data Analytics",
+  "Applied AI",
+  "Computer Vision",
+  "Data Analysis",
   "Business Intelligence",
   "Web Development",
 ];
@@ -54,24 +55,45 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      title: "AI Data Agent: Autonomous EDA",
+      category: "Applied AI",
+      timeline: "Dec - Jan 2026",
+      image: aiDataAgentImg,
+      summary:
+        "Built an autonomous AI-powered data analysis system that performs dataset profiling, cleaning, exploratory data analysis, visualization, and professional report generation with minimal user input.",
+      achievements: [
+        "Designed a modular agent-based pipeline to profile datasets, detect low-value columns, and guide EDA decisions automatically",
+        "Implemented smart visualization logic to generate only high-signal charts based on variance, correlation, outliers, and cardinality",
+        "Integrated an LLM-based narrative engine to produce executive-style EDA reports and export full PDF and modeling-ready notebooks"
+      ],
+      tech: [
+        "Python",
+        "Streamlit",
+        "LLM",
+        "Agent-based Design"
+      ],
+      link: "https://github.com/arpitbhuker/AI_Data_Agent",
+    },    
+    {
+      id: 2,
       title: "PhishNet: Suspicious Link Analyzer",
-      category: "AI/ML",
+      category: "Applied AI",
       timeline: "Oct - Dec 2025",
       image: phishnetImg,
       summary:
-        "Developed a local phishing URL analysis tool that evaluates suspicious links using structured feature extraction and rule-based risk scoring to flag potentially malicious websites.",
+      "Built a phishing URL analysis system using deterministic feature extraction, protocol-aware parsing, and weighted risk scoring to identify deceptive or high-risk links.",
       achievements: [
-        "Implemented 8+ URL-based detection signals for risk evaluation",
-        "Reduced setup friction by packaging the tool as a standalone executable",
-        "Enabled fast, offline link analysis without external dependencies",
+        "Developed a multi-signal URL inspection pipeline detecting userinfo injection, deceptive subdomains, and redirect abuse",
+        "Added Unicode and IDN normalization with relaxed structural validation to reliably analyze real-world phishing URLs",
+        "Delivered an offline, executable-based tool for fast local link risk assessment without external threat intelligence",
       ],
-      tech: ["Python", "Flask", "PyInstaller", "Feature Engineering"],
+      tech: ["Python", "Flask", "Feature Engineering"],
       link: "https://github.com/arpitbhuker/PhishNet",
     },
     {
-      id: 2,
+      id: 3,
       title: "Customer Shopping Behavior Analysis",
-      category: "Data Science",
+      category: "Data Analysis",
       timeline: "Oct – Nov 2025",
       image: shoppingBehaviorImg,
       summary:
@@ -85,7 +107,7 @@ const Projects = () => {
       link: "https://github.com/arpitbhuker/Customer_Shopping_Behavior_Data_Analysis",
     },
     {
-      id: 3,
+      id: 4,
       title: "Personal Portfolio Website",
       category: "Web Development",
       timeline: "Sep – Oct 2025",
@@ -101,9 +123,9 @@ const Projects = () => {
       link: "https://github.com/arpitbhuker/Arpit-s-Portfolio",
     },
     {
-      id: 4,
+      id: 5,
       title: "Gesture Control System",
-      category: "AI/ML",
+      category: "Computer Vision",
       timeline: "Jul – Aug 2025",
       image: gestureImg,
       summary:
@@ -117,9 +139,9 @@ const Projects = () => {
       link: "https://github.com/arpitbhuker/PPT-Gesture-Control",
     },
     {
-      id: 5,
+      id: 6,
       title: "Netflix Data Analysis",
-      category: "Data Science",
+      category: "Data Analysis",
       timeline: "Feb – Mar 2025",
       image: netflixImg,
       summary:
@@ -133,9 +155,9 @@ const Projects = () => {
       link: "https://github.com/arpitbhuker/Netflix-Data-Analysis",
     },
     {
-      id: 6,
+      id: 7,
       title: "Electric Vehicles Data Analysis",
-      category: "Data Analytics",
+      category: "Data Analysis",
       timeline: "Jun – Jul 2024",
       image: evImg,
       summary:
@@ -149,7 +171,7 @@ const Projects = () => {
       link: "https://github.com/arpitbhuker/Electric-Vehicles-Data-Analysis",
     },
     {
-      id: 7,
+      id: 8,
       title: "Amazon Sales Analytics Dashboard",
       category: "Business Intelligence",
       timeline: "Jan – Feb 2024",
@@ -165,9 +187,9 @@ const Projects = () => {
       link: "https://github.com/arpitbhuker/Amazon-Sales-Dashboard",
     },
     {
-      id: 8,
+      id: 9,
       title: "AI-Driven Financial Fraud Detection System",
-      category: "AI/ML",
+      category: "Applied AI",
       timeline: "Jan – Apr 2024",
       image: fraudImg,
       summary:
@@ -181,9 +203,9 @@ const Projects = () => {
       link: "https://github.com/arpitbhuker/AI-Driven-Financial-Fraud-Detection-System",
     },
     {
-      id: 9,
+      id: 10,
       title: "Twitter Analytics Dashboard",
-      category: "Data Analytics",
+      category: "Business Intelligence",
       timeline: "Mar – Apr 2024",
       image: twitterImg,
       summary:
@@ -261,25 +283,25 @@ const Projects = () => {
                   ease: "easeOut",
                 }}
                 className="
-    group relative rounded-xl overflow-hidden
-    flex flex-col justify-between
-    bg-[#0A2A43]/60 backdrop-blur-xl
-    border border-[#00E5FF]/20
-    shadow-[0_4px_18px_rgba(0,229,255,0.08)]
-    transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]
-    hover:scale-450
-    hover:shadow-[0_12px_36px_rgba(0,229,255,0.25)]
-  "
+                  group relative rounded-xl overflow-hidden
+                  flex flex-col justify-between
+                  bg-[#0A2A43]/60 backdrop-blur-xl
+                  border border-[#00E5FF]/20
+                  shadow-[0_4px_18px_rgba(0,229,255,0.08)]
+                  transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]
+                  hover:scale-450
+                  hover:shadow-[0_12px_36px_rgba(0,229,255,0.25)]
+                "
               >
                 {/* ✅ Hover Gradient Overlay — EXACT effect requested */}
                 <div
                   className="
-      absolute inset-0 rounded-xl pointer-events-none
-      bg-gradient-to-br from-[#00E5FF]/10 to-[#007EFF]/10
-      opacity-0 group-hover:opacity-40
-      transition-opacity duration-500 ease-out
-      z-0
-    "
+                    absolute inset-0 rounded-xl pointer-events-none
+                    bg-gradient-to-br from-[#00E5FF]/10 to-[#007EFF]/10
+                    opacity-0 group-hover:opacity-40
+                    transition-opacity duration-500 ease-out
+                    z-0
+                  "
                 />
 
                 {/* ✅ Card Content (Preserved) */}
@@ -288,9 +310,9 @@ const Projects = () => {
                     src={project.image}
                     alt={project.title}
                     className="
-      h-44 w-full object-cover
-      transition-transform duration-500 ease-out
-    "
+                      h-44 w-full object-cover
+                      transition-transform duration-500 ease-out
+                    "
                   />
                   <div className="p-6 space-y-4">
                     <div className="flex justify-between items-center">
@@ -351,12 +373,12 @@ const Projects = () => {
           >
             <Card
               className="p-10 rounded-3xl 
-    bg-gradient-to-br from-cyan-500/10 to-blue-600/10
-    border border-cyan-400/20 backdrop-blur-xl
-    shadow-[0_0_20px_rgba(0,255,255,0.2)]
-    hover:shadow-[0_0_35px_rgba(0,255,255,0.35)]
-    transition-all duration-500
-    max-w-4xl mx-auto"
+                bg-gradient-to-br from-cyan-500/10 to-blue-600/10
+                border border-cyan-400/20 backdrop-blur-xl
+                shadow-[0_0_20px_rgba(0,255,255,0.2)]
+                hover:shadow-[0_0_35px_rgba(0,255,255,0.35)]
+                transition-all duration-500
+                max-w-4xl mx-auto"
             >
               <div className="space-y-6">
                 <h3 className="text-3xl font-bold">
