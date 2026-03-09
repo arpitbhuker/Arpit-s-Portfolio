@@ -28,6 +28,7 @@ import portfolioImg from "@/assets/portfolio.png";
 import phishnetImg from "@/assets/phishnet.png";
 import shoppingBehaviorImg from "@/assets/shopping_behavior.png";
 import aiDataAgentImg from "@/assets/aidataagent.png";
+import excelImg from "@/assets/excel.png";
 
 const categoryIcons: Record<string, any> = {
   "Applied AI": Brain,
@@ -124,6 +125,22 @@ const Projects = () => {
     },
     {
       id: 5,
+      title: "Sales Performance Analytics Dashboard",
+      category: "Data Analysis",
+      timeline: "Aug – Sep 2025",
+      image: excelImg,
+      summary:
+        "Developed an interactive sales analytics dashboard to analyze transaction-level data and uncover revenue trends, product performance, and regional growth patterns using Excel-based analytics workflows.",
+      achievements: [
+        "Analyzed 30k+ sales transactions to identify revenue trends and product performance across multiple regions",
+        "Defined and calculated key KPIs such as monthly revenue, category contribution, and regional growth rates using SQL and Excel",
+        "Built an interactive Excel dashboard using Pivot Tables and Power Query to highlight underperforming categories and seasonal demand patterns"
+      ],
+      tech: ["Excel","Pivot Tables", "Power Query", "Data Visualization"],
+      link: "https://github.com/arpitbhuker/sales_performance_analytics_excel_dashboard",
+    },
+    {
+      id: 6,
       title: "Gesture Control System",
       category: "Computer Vision",
       timeline: "Jul – Aug 2025",
@@ -139,7 +156,7 @@ const Projects = () => {
       link: "https://github.com/arpitbhuker/PPT-Gesture-Control",
     },
     {
-      id: 6,
+      id: 7,
       title: "Netflix Data Analysis",
       category: "Data Analysis",
       timeline: "Feb – Mar 2025",
@@ -155,7 +172,7 @@ const Projects = () => {
       link: "https://github.com/arpitbhuker/Netflix-Data-Analysis",
     },
     {
-      id: 7,
+      id: 8,
       title: "Electric Vehicles Data Analysis",
       category: "Data Analysis",
       timeline: "Jun – Jul 2024",
@@ -171,7 +188,7 @@ const Projects = () => {
       link: "https://github.com/arpitbhuker/Electric-Vehicles-Data-Analysis",
     },
     {
-      id: 8,
+      id: 9,
       title: "Amazon Sales Analytics Dashboard",
       category: "Business Intelligence",
       timeline: "Jan – Feb 2024",
@@ -187,7 +204,7 @@ const Projects = () => {
       link: "https://github.com/arpitbhuker/Amazon-Sales-Dashboard",
     },
     {
-      id: 9,
+      id: 10,
       title: "AI-Driven Financial Fraud Detection System",
       category: "Applied AI",
       timeline: "Jan – Apr 2024",
@@ -203,7 +220,7 @@ const Projects = () => {
       link: "https://github.com/arpitbhuker/AI-Driven-Financial-Fraud-Detection-System",
     },
     {
-      id: 10,
+      id: 11,
       title: "Twitter Analytics Dashboard",
       category: "Business Intelligence",
       timeline: "Mar – Apr 2024",

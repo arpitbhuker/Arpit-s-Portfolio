@@ -15,7 +15,7 @@ const Contact = () => {
   ];
 
   const contactMethods = [
-    { icon: Mail, label: "Email", link: "mailto:arpitkumarbhuker@gmail.com", gradient: "from-blue-500 to-purple-600" },
+    { icon: Mail, label: "Email", link: "https://mail.google.com/mail/?view=cm&fs=1&to=arpitkumarbhuker@gmail.com&subject=Opportunity%20Regarding%20Your%20Portfolio", gradient: "from-blue-500 to-purple-600" },
     { icon: Linkedin, label: "LinkedIn", link: "https://www.linkedin.com/in/arpitbhuker/", gradient: "from-blue-400 to-blue-700" },
     { icon: Github, label: "GitHub", link: "https://github.com/arpitbhuker", gradient: "from-gray-700 to-gray-900" },
     { icon: MessageCircle, label: "WhatsApp", link: "https://wa.me/918168759378", gradient: "from-green-400 to-green-600" }

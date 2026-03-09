@@ -58,7 +58,7 @@ const Footer = () => {
                 variant="outline"
                 size="icon"
                 className="border-primary/50 hover:bg-primary/10 hover-3d"
-                onClick={() => window.open("mailto:arpitkumarbhuker@gmail.com", "_blank")}
+                onClick={() => window.open("https://mail.google.com/mail/?view=cm&fs=1&to=arpitkumarbhuker@gmail.com&subject=Opportunity%20Regarding%20Your%20Portfolio","_blank")}
               >
                 <Mail size={20} />
               </Button>

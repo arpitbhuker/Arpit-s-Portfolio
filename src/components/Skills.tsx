@@ -45,17 +45,6 @@ const Skills = () => {
       category: "Database",
     },
     {
-      title: "Data Visualisation: Empowering Business with Effective Insights",
-      provider: "TCS (via Forage)",
-      date: "Sep 2025",
-      icon: BarChart3,
-      link: "https://www.theforage.com/completion-certificates/ifobHAoMjQs9s6bKS/MyXvBcppsW2FkNYCX_ifobHAoMjQs9s6bKS_68c26611cd7d6aa0db5280d3_1758705776107_completion_certificate.pdf",
-      description:
-        "Training on data visualization techniques and business intelligence using modern visualization tools",
-      skills: ["Data Visualization", "Power BI", "Business Insights"],
-      category: "Data Analytics",
-    },
-    {
       title: "SQL: A Practical Introduction for Querying Databases",
       provider: "IBM (via Coursera)",
       date: "Jun 2025",
@@ -101,13 +90,38 @@ const Skills = () => {
     },
   ];
 
-  const categories = ["All", "AI/ML", "Cloud & AI", "Database", "Data Analytics"];
+  const categories = ["All", "AI/ML", "Cloud & AI", "Database"];
   const filteredCerts = useMemo(() => {
     if (selectedCategory === "All") return certifications;
     return certifications.filter((c) => c.category === selectedCategory);
   }, [selectedCategory]);
 
   const trainingAndWorkshops = [
+    {
+      type: "Simulation",
+      title: "GenAI Powered Data Analytics Job Simulation",
+      provider: "TATA Group (via Forage)",
+      timeline: "Jan 2026",
+      description:
+        "Completed a practical industry job simulation focused on applying generative AI and data analytics to real-world business problems, including exploratory data analysis, delinquency risk prediction, data storytelling, and designing an AI-driven collections strategy.",
+      icon: BarChart3,
+      skillsDeveloped: [
+        "Exploratory Data Analysis",
+        "Predictive Analytics",
+        "AI Strategy",
+        "Data Interpretation",
+        "Analytical Reporting",
+        "Decision Making"
+      ],
+      skillsLabel: "Skills Gained",
+      category: "Job Simulation",
+      certificates: [
+        {
+          label: "Certificate",
+          url: "https://www.theforage.com/completion-certificates/ifobHAoMjQs9s6bKS/gMTdCXwDdLYoXZ3wG_ifobHAoMjQs9s6bKS_68c26611cd7d6aa0db5280d3_1769105362734_completion_certificate.pdf"
+        }
+      ]
+    },
     {
       type: "Workshop",
       title: "Generative AI Mastermind",
@@ -124,11 +138,35 @@ const Skills = () => {
         "Deep Learning Concepts"
       ],
       skillsLabel: "Skills Gained",
-      category: "Course/Mastermind",
+      category: "Workshop",
       certificates: [
         {
           label: "Certificate",
           url: "https://drive.google.com/file/d/1aoGiKgCAHrZVoIJCAZk5YwwEadaxBiGu/view?usp=sharing"
+        }
+      ]
+    },
+    {
+      type: "Simulation",
+      title: "Data Visualisation: Empowering Business with Effective Insights",
+      provider: "TATA Group (via Forage)",
+      timeline: "Sep 2025",
+      description:
+        "Completed a practical job simulation focused on transforming business data into meaningful insights using modern data visualization techniques and business intelligence tools.",
+      icon: BarChart3,
+      skillsDeveloped: [
+        "Data Visualization",
+        "Power BI",
+        "Business Intelligence",
+        "Business Insights",
+        "Data Storytelling"
+      ],
+      skillsLabel: "Skills Gained",
+      category: "Job Simulation",
+      certificates: [
+        {
+          label: "Certificate",
+          url: "https://www.theforage.com/completion-certificates/ifobHAoMjQs9s6bKS/MyXvBcppsW2FkNYCX_ifobHAoMjQs9s6bKS_68c26611cd7d6aa0db5280d3_1758705776107_completion_certificate.pdf"
         }
       ]
     },
@@ -211,7 +249,7 @@ const Skills = () => {
     }
   ];
 
-  const trainingFilters = ["All", "Training", "Workshop"];
+  const trainingFilters = ["All", "Training", "Workshop", "Simulation"];
 
   const filteredTraining = useMemo(() => {
     if (selectedTraining === "All") return trainingAndWorkshops;
