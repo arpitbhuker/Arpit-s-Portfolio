@@ -2,7 +2,7 @@ import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 import { ChevronDown, Download, Github, Linkedin, Mail, Cpu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import arpitProfile from "@/assets/arpit-profile.png";
+import arpitProfile from "@/assets/arpit-profile-1.png";
 import resumePDF from "@/assets/Resume.pdf";
 
 // ─────────────────────────────────────────────
