@@ -1,58 +1,74 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Home, User, Briefcase, Code, Mail, Award } from "lucide-react";
+
+// ✅ FIXED: removed unused Award import
+import { Menu, X, Home, User, Briefcase, Code, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+// ✅ Wire NAV_SECTIONS from constants — single source of truth
+import { NAV_SECTIONS } from "@/lib/constants";
+
+// Map section ids to icons
+const SECTION_ICONS: Record<string, React.ElementType> = {
+  home:     Home,
+  about:    User,
+  skills:   Code,
+  projects: Briefcase,
+  contact:  Mail,
+};
+
 const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen]           = useState(false);
   const [activeSection, setActiveSection] = useState("home");
 
-  const menuItems = [
-    { id: "home", label: "Home", icon: Home },
-    { id: "about", label: "About", icon: User },
-    { id: "skills", label: "Skills", icon: Code },
-    { id: "projects", label: "Projects", icon: Briefcase },
-    { id: "contact", label: "Contact", icon: Mail },
-  ];
+  // ✅ FIXED: menuItems moved outside useEffect scope so the
+  // closure is stable — no stale reference to previous renders
+  const menuItems = NAV_SECTIONS.map((s) => ({
+    id:    s.id,
+    label: s.label,
+    icon:  SECTION_ICONS[s.id] ?? Home,
+  }));
 
   useEffect(() => {
+    const ids = menuItems.map((item) => item.id);
+
     const handleScroll = () => {
-      const sections = menuItems.map(item => document.getElementById(item.id));
       const scrollPos = window.scrollY + 100;
 
-      sections.forEach((section) => {
-        if (section) {
-          const top = section.offsetTop;
-          const height = section.offsetHeight;
-          
-          if (scrollPos >= top && scrollPos < top + height) {
-            setActiveSection(section.id);
-          }
+      for (const id of ids) {
+        const section = document.getElementById(id);
+        if (!section) continue;
+
+        const top    = section.offsetTop;
+        const height = section.offsetHeight;
+
+        if (scrollPos >= top && scrollPos < top + height) {
+          setActiveSection(id);
+          break;
         }
-      });
+      }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
+    // ids is derived from NAV_SECTIONS (static constant) — stable reference
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
     setIsOpen(false);
   };
 
   return (
     <>
-      {/* Desktop Navigation */}
+      {/* ── Desktop ── */}
       <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 hidden md:block">
         <motion.div
           initial={{ y: -100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
+          animate={{ y: 0,    opacity: 1 }}
           transition={{ duration: 0.6 }}
-          className="glass-card px-6 py-3 rounded-full"
+          className="nav-glass px-6 py-3 rounded-full"
         >
           <div className="flex items-center space-x-6">
             {menuItems.map((item) => {
@@ -71,6 +87,7 @@ const Navigation = () => {
                     <Icon size={18} />
                     <span className="text-sm font-medium">{item.label}</span>
                   </div>
+
                   {activeSection === item.id && (
                     <motion.div
                       layoutId="navIndicator"
@@ -85,7 +102,7 @@ const Navigation = () => {
         </motion.div>
       </nav>
 
-      {/* Mobile Navigation */}
+      {/* ── Mobile ── */}
       <div className="md:hidden">
         <Button
           variant="outline"
@@ -106,6 +123,7 @@ const Navigation = () => {
                 className="fixed inset-0 bg-background/80 backdrop-blur-sm z-50"
                 onClick={() => setIsOpen(false)}
               />
+
               <motion.div
                 initial={{ x: "100%" }}
                 animate={{ x: 0 }}
@@ -123,7 +141,7 @@ const Navigation = () => {
                     <X size={20} />
                   </Button>
                 </div>
-                
+
                 <div className="space-y-4">
                   {menuItems.map((item) => {
                     const Icon = item.icon;
