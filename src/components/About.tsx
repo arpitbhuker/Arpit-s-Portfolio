@@ -553,7 +553,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="flex justify-center lg:justify-start order-1"
           >
-            <div className="relative w-[360px] sm:w-[390px] md:w-[470px] lg:w-[550px] -mt-32">
+            <div className="relative w-full max-w-[360px] sm:max-w-[390px] md:max-w-[470px] lg:max-w-[550px] -mt-32">
               <div
                 className="absolute inset-0 blur-2xl"
                 style={{ background: "radial-gradient(circle, rgba(7,212,245,0.04), transparent 70%)" }}

@@ -89,7 +89,7 @@ const SKILL_GROUPS: {
   },
   {
     title: "Business Analytics",
-    icon: TrendingUp, accent: "orange",
+    icon: TrendingUp, accent: "emerald",
     desc: "Metrics, KPIs & decision intelligence",
     items: [
       { label: "Trend Analysis",      icon: LineChart            },
@@ -126,7 +126,7 @@ const SKILL_GROUPS: {
   },
   {
     title: "Data Engineering",
-    icon: Database, accent: "emerald",
+    icon: Database, accent: "orange",
     desc: "Pipelines, schemas & data infrastructure",
     items: [
       { label: "MySQL",               logo: DI("mysql")         },
